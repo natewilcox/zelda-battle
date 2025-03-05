@@ -104,7 +104,7 @@ export class OnJoinCommand extends Command<BattleRoyaleRoom, Payload> {
                 
                 //add a tick listen to start game when it counts down to 0
                 this.room._events.on('ontick', (timer) => {
-
+                   
                     //if the timer goes down and we still have more than one player
                     if(timer == 0 && this.room.clients.length >= minClients) {
                         

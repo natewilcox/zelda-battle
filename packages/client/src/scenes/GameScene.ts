@@ -291,13 +291,13 @@ export default class GameScene extends Phaser.Scene {
         // //when tiles are mutated
         // roomState.mutatedTiles.onAdd = this.handleTileMutation;
 
-        // this.serverService.onTick((timer) => {
-        //     SceneEvents.emit('ontick', timer)
-        // });
+        this.serverService.onTick((timer) => {
+            SceneEvents.emit('ontick', timer)
+        });
 
-        // this.serverService.onZoneChanged((zone) => {
-        //     this.shrinkZone(zone.width, zone.x, zone.y, 1000);
-        // });
+        this.serverService.onZoneChanged((zone) => {
+            this.shrinkZone(zone.width, zone.x, zone.y, 1000);
+        });
 
         // //init animated map and animations and set bounds
         this.animatedTiles.init(this.map);
@@ -305,13 +305,13 @@ export default class GameScene extends Phaser.Scene {
         this.serverService.onCameraBoundsChanged((e) => {
             this.cameras.main.setBounds(e.x, e.y, e.w, e.h);
         });
-        // this.serverService.onFadeIn(() => this.fadeScene(true));
-        // this.serverService.onFadeOut(() => this.fadeScene(false));
+        this.serverService.onFadeIn(() => this.fadeScene(true));
+        this.serverService.onFadeOut(() => this.fadeScene(false));
 
-        // //if debug is enabled, draw collision
-        // if(debug) {
-        //     debugDraw(groundLayer, this);
-        // }
+        //if debug is enabled, draw collision
+        if(debug) {
+            debugDraw(groundLayer, this);
+        }
 
         // this.sparkEmitter = this.add.particles('flash').setDepth(40).createEmitter({
         //     x: 100,
@@ -355,9 +355,9 @@ export default class GameScene extends Phaser.Scene {
         //     frequency: -1
         // });
 
-        // if(hasStorm == true) {
-        //     this.initStorm(player, roomState);
-        // }
+        if(hasStorm == true) {
+            this.initStorm(player, roomState);
+        }
     }
 
     private handleTileMutation = (tile: IMutatedTile) => {
@@ -662,24 +662,24 @@ export default class GameScene extends Phaser.Scene {
         }
 
         //init npcs
-        // roomState.npcs.forEach(npc => {
+        roomState.npcs.forEach(npc => {
 
-        //     const id = addEntity(this.world!);
-        //     addComponent(this.world!, NPC, id);
+            const id = addEntity(this.world!);
+            addComponent(this.world!, NPC, id);
 
-        //     this.entityMap.set(npc.id, id);
-        //     NPC.id[id] = npc.id;
-        // });
+            this.entityMap.set(npc.id, id);
+            NPC.id[id] = npc.id;
+        });
 
         //init enemies
-        // roomState.enemies.forEach(enemy => {
+        roomState.enemies.forEach(enemy => {
 
-        //     const id = addEntity(this.world!);
-        //     addComponent(this.world!, BadGuy, id);
+            const id = addEntity(this.world!);
+            addComponent(this.world!, BadGuy, id);
 
-        //     this.entityMap.set(enemy.id, id);
-        //     BadGuy.id[id] = enemy.id;
-        // });
+            this.entityMap.set(enemy.id, id);
+            BadGuy.id[id] = enemy.id;
+        });
 
         // roomState.enemies.onRemove = enemy => {
         //     const id = this.entityMap.get(enemy.id);
@@ -791,15 +791,15 @@ export default class GameScene extends Phaser.Scene {
     }
 
     private onWaitingForPlayersEnter() {
-        //console.log('waiting for players');
+        console.log('waiting for players');
     }
 
     private onInProgressEnter() {
-        //console.log('game in progress');
+        console.log('game in progress');
     }
 
     private onGameOverEnter() {
-        //console.log('game has ended');
+        console.log('game has ended');
     }
     
 
@@ -1069,21 +1069,21 @@ export default class GameScene extends Phaser.Scene {
         this.gameModeId = config.gameMode;
         this.componentService = config.componentService;
         this.serverService = config.serverService;
-        //this.onGameError = config.onGameError;
+        this.onGameError = config.onGameError;
 
-        // SceneEvents.once('onreadyup', () => {
-        //     this.cleanup();
-        //     config.onPlayAgain(config.gameMode);
-        // });
+        SceneEvents.once('onreadyup', () => {
+            this.cleanup();
+            config.onPlayAgain(config.gameMode);
+        });
 
         // SceneEvents.once('onreturntolobby', () => {
         //     this.cleanup();
         //     config.onReturnToLobby();
         // });
 
-        // SceneEvents.on('onswitchweapon', (event) => {
-        //     this.serverService.trySwitchWeaponFromBag(event.slot, event.bagPosition);
-        // });
+        SceneEvents.on('onswitchweapon', (event) => {
+            this.serverService.trySwitchWeaponFromBag(event.slot, event.bagPosition);
+        });
 
         this.players = this.physics.add.group({
             classType: Link

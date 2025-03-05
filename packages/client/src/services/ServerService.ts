@@ -89,7 +89,7 @@ export default class ServerService {
         const room_name = `room_${gameMode}`;
     
         try {
-            console.log('joining')
+
             //get a reference to the room when joining.
             this.room = await this.client.joinOrCreate<IBattleRoyaleRoomState>(room_name, {
                 handle: handle,
@@ -97,8 +97,6 @@ export default class ServerService {
                 token: token,
                 gameMode: gameMode
             });
-
-            console.log('joined')
 
             this.room.onLeave((code) => {
                 this.events.emit(ServerEvents.OnLeave, code);
@@ -111,186 +109,178 @@ export default class ServerService {
             this.room.onStateChange.once(state => {
                 this.events.emit(ServerEvents.OnJoin, state);
             });
+
             const $ = getStateCallbacks(this.room);
 
-            $(this.room.state).playerStates.onAdd((player, sessionId) => {
-                // this is the raw Schema instance
-                console.log(player.id);
-             
-                // this is the proxied version, where you can attach the callbacks
-                // $(player).listen("x", (value, previousValue) => {
-                //     console.log("player.x has been updated!", value, previousValue);
-                // });
+            $(this.room.state).playerStates.onAdd((state, i) => {
+                this.events.emit(ServerEvents.OnPlayerJoin, state);
+                this.events.emit(ServerEvents.OnGameStateChanged, this.room.state, this.room.state.gameState);
             });
-            // this.room.onStateChange((state) => {
-            //     console.log(this.room.state)
-            // });
 
-            //this.room.state.playerStates.onAdd = (state, i) => {
-                //this.events.emit(ServerEvents.OnPlayerJoin, state);
-                //this.events.emit(ServerEvents.OnGameStateChanged, this.room.state, this.room.state.gameState);
-            //};
+            $(this.room.state).playerStates.onRemove((state, i) => {
+                this.events.emit(ServerEvents.OnPlayerLeave, state);
+                this.events.emit(ServerEvents.OnGameStateChanged, this.room.state, this.room.state.gameState);
+            });
 
-        //     this.room.state.playerStates.onRemove = (state, i) => {
-        //         this.events.emit(ServerEvents.OnPlayerLeave, state);
-        //         this.events.emit(ServerEvents.OnGameStateChanged, this.room.state, this.room.state.gameState);
-        //     };
-
-        //     this.room.onMessage(ServerMessages.PONG, (data) => {
-        //         this.events.emit(ServerEvents.OnPong, data);
-        //     });
+            this.room.onMessage(ServerMessages.PONG, (data) => {
+                this.events.emit(ServerEvents.OnPong, data);
+            });
             
-        //     this.room.onMessage(ServerMessages.ChestOpened, (id) => {
-        //         this.events.emit(ServerEvents.ChestOpened, id);
-        //     });
+            this.room.onMessage(ServerMessages.ChestOpened, (id) => {
+                this.events.emit(ServerEvents.ChestOpened, id);
+            });
 
-        //     this.room.onMessage(ServerMessages.Hit, (data) => {
-        //         this.events.emit(ServerEvents.OnHit, data);
-        //     });
+            this.room.onMessage(ServerMessages.Hit, (data) => {
+                this.events.emit(ServerEvents.OnHit, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.Attack, (data) => {
-        //         this.events.emit(ServerEvents.OnAttack, data);
-        //     });
+            this.room.onMessage(ServerMessages.Attack, (data) => {
+                this.events.emit(ServerEvents.OnAttack, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.Message, (data) => {
-        //         this.events.emit(ServerEvents.OnMessage, data);
-        //     });
+            this.room.onMessage(ServerMessages.Message, (data) => {
+                this.events.emit(ServerEvents.OnMessage, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.Placement, (data) => {
-        //         this.events.emit(ServerEvents.OnPlacing, data);
-        //     });
+            this.room.onMessage(ServerMessages.Placement, (data) => {
+                this.events.emit(ServerEvents.OnPlacing, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.ArrowShot, (data) => {
-        //         this.events.emit(ServerEvents.OnArrowShot, data);
-        //     });
+            this.room.onMessage(ServerMessages.ArrowShot, (data) => {
+                this.events.emit(ServerEvents.OnArrowShot, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.FireballShot, (data) => {
-        //         this.events.emit(ServerEvents.OnFireballShot, data);
-        //     });
+            this.room.onMessage(ServerMessages.FireballShot, (data) => {
+                this.events.emit(ServerEvents.OnFireballShot, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.IceblastShot, (data) => {
-        //         this.events.emit(ServerEvents.OnIceblastShot, data);
-        //     });
+            this.room.onMessage(ServerMessages.IceblastShot, (data) => {
+                this.events.emit(ServerEvents.OnIceblastShot, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.LightBallShot, (data) => {
-        //         this.events.emit(ServerEvents.OnLightBallShot, data);
-        //     });
+            this.room.onMessage(ServerMessages.LightBallShot, (data) => {
+                this.events.emit(ServerEvents.OnLightBallShot, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.BulletCollision, (data) => {
-        //         this.events.emit(ServerEvents.OnBulletCollision, data);
-        //     });
+            this.room.onMessage(ServerMessages.BulletCollision, (data) => {
+                this.events.emit(ServerEvents.OnBulletCollision, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.DynamicChestOpened, (data) => {
-        //         this.events.emit(ServerEvents.OnDynamicChestOpened, data);
-        //     });
+            this.room.onMessage(ServerMessages.DynamicChestOpened, (data) => {
+                this.events.emit(ServerEvents.OnDynamicChestOpened, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.BombPlaced, (data) => {
-        //         this.events.emit(ServerEvents.OnBombPlaced, data);
-        //     });
+            this.room.onMessage(ServerMessages.BombPlaced, (data) => {
+                this.events.emit(ServerEvents.OnBombPlaced, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.BlockPlaced, (data) => {
-        //         this.events.emit(ServerEvents.OnBlockPlaced, data);
-        //     });
+            this.room.onMessage(ServerMessages.BlockPlaced, (data) => {
+                this.events.emit(ServerEvents.OnBlockPlaced, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.BombDetonated, (data) => {
-        //         this.events.emit(ServerEvents.OnBombDetonated, data);
-        //     });
+            this.room.onMessage(ServerMessages.BombDetonated, (data) => {
+                this.events.emit(ServerEvents.OnBombDetonated, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.SetCameraBounds, (data) => {
-        //         this.events.emit(ServerEvents.OnCameraBoundsChanged, data);
-        //     });
+            this.room.onMessage(ServerMessages.SetCameraBounds, (data) => {
+                this.events.emit(ServerEvents.OnCameraBoundsChanged, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.FadeIn, (data) => {
-        //         this.events.emit(ServerEvents.OnFadeIn, data);
-        //     });
+            this.room.onMessage(ServerMessages.FadeIn, (data) => {
+                this.events.emit(ServerEvents.OnFadeIn, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.FadeOut, (data) => {
-        //         this.events.emit(ServerEvents.OnFadeOut, data);
-        //     });
+            this.room.onMessage(ServerMessages.FadeOut, (data) => {
+                this.events.emit(ServerEvents.OnFadeOut, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.LighteningShot, (data) => {
-        //         this.events.emit(ServerEvents.OnLighteningShot, data);
-        //     });
+            this.room.onMessage(ServerMessages.LighteningShot, (data) => {
+                this.events.emit(ServerEvents.OnLighteningShot, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.ResetPlayer, (data) => {
-        //         this.events.emit(ServerEvents.OnPlayerReset, data);
-        //     });
+            this.room.onMessage(ServerMessages.ResetPlayer, (data) => {
+                this.events.emit(ServerEvents.OnPlayerReset, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.ShockPlayer, (data) => {
-        //         this.events.emit(ServerEvents.OnPlayerShocked, data);
-        //     });
+            this.room.onMessage(ServerMessages.ShockPlayer, (data) => {
+                this.events.emit(ServerEvents.OnPlayerShocked, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.FreezePlayer, (data) => {
-        //         this.events.emit(ServerEvents.OnPlayerFreezed, data);
-        //     });
+            this.room.onMessage(ServerMessages.FreezePlayer, (data) => {
+                this.events.emit(ServerEvents.OnPlayerFreezed, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.BurnPlayer, (data) => {
-        //         this.events.emit(ServerEvents.OnPlayerBurned, data);
-        //     });
+            this.room.onMessage(ServerMessages.BurnPlayer, (data) => {
+                this.events.emit(ServerEvents.OnPlayerBurned, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.WakePlayerUp, (data) => {
-        //         this.events.emit(ServerEvents.OnWakeUp, data);
-        //     });
+            this.room.onMessage(ServerMessages.WakePlayerUp, (data) => {
+                this.events.emit(ServerEvents.OnWakeUp, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.Talk, (data) => {
-        //         this.events.emit(ServerEvents.OnTalk, data);
-        //     });
+            this.room.onMessage(ServerMessages.Talk, (data) => {
+                this.events.emit(ServerEvents.OnTalk, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.BagContentsChanged, (data) => {
-        //         this.events.emit(ServerEvents.OnBagContentsChanged, data);
-        //     });
+            this.room.onMessage(ServerMessages.BagContentsChanged, (data) => {
+                this.events.emit(ServerEvents.OnBagContentsChanged, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.MovePlayer, (data) => {
-        //         this.events.emit(ServerEvents.OnMovePlayer, data);
-        //     });
+            this.room.onMessage(ServerMessages.MovePlayer, (data) => {
+                this.events.emit(ServerEvents.OnMovePlayer, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.Disconnected, (data) => {
-        //         this.events.emit(ServerEvents.OnDisconnected, data);
-        //     });
+            this.room.onMessage(ServerMessages.Disconnected, (data) => {
+                this.events.emit(ServerEvents.OnDisconnected, data);
+            });
 
-        //     this.room.onMessage(ServerMessages.LockedDoorOpened, (data) => {
-        //         this.events.emit(ServerEvents.OnLockedDoorOpened, data);
-        //     });
+            this.room.onMessage(ServerMessages.LockedDoorOpened, (data) => {
+                this.events.emit(ServerEvents.OnLockedDoorOpened, data);
+            });
 
-        //     //handle state changes that do not have a specific handler
-        //     this.room.state.onChange = (changes) => {
+            $(this.room.state).listen('timer', (cur, prev) => {
+                this.events.emit(ServerEvents.OnTick, cur);
+            });
 
-        //         let zoneChanged = false;
+            //handle state changes that do not have a specific handler
+            // $(this.room.state).onChange((changes) => {
 
-        //         changes.forEach(change => {
+            //     let zoneChanged = false;
 
-        //             switch(change.field) {
+            //     changes.forEach(change => {
 
-        //                 //case when server game state changes.
-        //                 case 'gameState':
-        //                     this.events.emit(ServerEvents.OnGameStateChanged, this.room.state, change.value);
-        //                     break;
+            //         switch(change.field) {
 
-        //                 case "timer": 
-        //                     this.events.emit(ServerEvents.OnTick, change.value);
-        //                     break;
+            //             //case when server game state changes.
+            //             case 'gameState':
+            //                 this.events.emit(ServerEvents.OnGameStateChanged, this.room.state, change.value);
+            //                 break;
+
+            //             case "timer": 
+            //                 this.events.emit(ServerEvents.OnTick, change.value);
+            //                 break;
                         
 
-        //                 case "zoneWidth" :
-        //                 case "zoneX" :
-        //                 case "zoneY" :
+            //             case "zoneWidth" :
+            //             case "zoneX" :
+            //             case "zoneY" :
 
-        //                     //make sure we only process this change once
-        //                     if(!zoneChanged) {
+            //                 //make sure we only process this change once
+            //                 if(!zoneChanged) {
 
-        //                         zoneChanged = true;
-        //                         this.events.emit(ServerEvents.OnZoneChanged, {
-        //                             width: this.room.state.zoneWidth,
-        //                             x: this.room.state.zoneX,
-        //                             y: this.room.state.zoneY
-        //                         });
-        //                     }
+            //                     zoneChanged = true;
+            //                     this.events.emit(ServerEvents.OnZoneChanged, {
+            //                         width: this.room.state.zoneWidth,
+            //                         x: this.room.state.zoneX,
+            //                         y: this.room.state.zoneY
+            //                     });
+            //                 }
                             
-        //                     break;
-        //             }
+            //                 break;
+            //         }
 
-        //         });
-        //     };
+            //     });
+            // });
         }
         catch(ex) {
             console.error(`unable to join room '${room_name}'`, ex);

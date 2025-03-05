@@ -28,7 +28,7 @@ const config: Phaser.Types.Core.GameConfig = {
         autoCenter: Phaser.Scale.CENTER_BOTH,
 		zoom: 2
 	},
-	scene: [Preloader, Bootstrap, LoadingScene, GameScene, HUD]//, HUD, ErrorScene],
+	scene: [Preloader, Bootstrap, LoadingScene, GameScene, HUD, ErrorScene]
 }
 
 export default new Phaser.Game(config)

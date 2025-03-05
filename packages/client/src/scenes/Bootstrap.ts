@@ -67,8 +67,8 @@ export default class Bootstrap extends Phaser.Scene {
             gameMode: 'overworld1',
             serverService: this.serverService,
             componentService: this.componentService,
-            //onPlayAgain: this.onPlayAgain,
-            //onGameError: this.onGameError
+            onPlayAgain: this.onPlayAgain,
+            onGameError: this.onGameError
         });
         this.scene.launch('hud');
 
@@ -78,37 +78,28 @@ export default class Bootstrap extends Phaser.Scene {
         });
     }
 
-    // private onPlay = (gameId: number) => {
+    private onPlayAgain = (gameId: number) => {
+
+        this.scene.stop('game');
+        this.scene.stop('hud');
+
+        this.scene.launch('loading', {
+            defaultState: 'Reading up...',
+            hint: getHint()
+        });
+
+        // TODO need to run:
+        // this.startGame(gameId);
+    }
+
+    private onGameError = () => {
+        this.serverService.leave();
         
-    //     this.scene.stop('lobby');
-    //     this.startGame(gameId);
-    // }
-
-    // private onPlayAgain = (gameId: number) => {
-
-    //     this.scene.stop('game');
-    //     this.scene.stop('hud');
-
-    //     this.scene.launch('loading', {
-    //         defaultState: 'Reading up...',
-    //         hint: getHint()
-    //     });
-
-    //     SceneEvents.once('datasaved', () => {
-
-    //         this.scene.stop('loading');
-    //         this.startGame(gameId);
-    //     });
-    // }
-
-    // private onGameError = () => {
-    //     this.serverService.leave();
-        
-    //     //stop game and hud scenes
-    //     this.scene.stop('game');
-    //     this.scene.stop('hud');
-    //     this.scene.start('error', {
-    //         message: 'Error encountered...'
-    //     });
-    // }
+        //stop game and hud scenes
+        this.scene.stop('game');
+        this.scene.stop('hud');
+        this.scene.start('error', {
+            message: 'Error encountered...'
+        });
+    }
 }

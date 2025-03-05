@@ -1,0 +1,110 @@
+
+<style>
+
+    .menuPanel {
+      background-image: url('./images/large-banner.png');
+      background-repeat: no-repeat;
+      background-size: 370px 270px;
+      width: 350px;
+      height: 250px;
+      padding: 10px;
+    }
+
+    .menuPanel p {
+
+        color: white;
+        font-family: minecraft;
+        font-size: 10px;
+        left: 15;
+        width: 100px;
+        position: absolute;
+    }
+    .menuPanel .buttons {
+        bottom: 0;
+        left: -28;
+        position: absolute;
+    }
+
+    .menuPanel .buttons ul {
+        list-style: none;
+    }
+
+    .menuPanel .buttons ul li {
+        margin: 2px;
+        padding: 0px;
+    }
+
+    .menuPanel .buttons ul li button {
+        width: 100px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        font-family: minecraft;
+        border: none;
+        background-color: #EFD694;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    .menuPanel .buttons ul li button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        background-color: #CEA56B;
+    }
+
+    .menuPanel #items td {
+        width: 50px;
+        height: 50px;
+        background-color: #262626;
+    }
+
+    .slot {
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .sword1 { background-image: url('../menuItems/sword1.png'); }
+    .sword2 { background-image: url('../menuItems/sword2.png'); }
+    .sword3 { background-image: url('../menuItems/sword3.png'); }
+    .sword4 { background-image: url('../menuItems/sword4.png'); }
+    .staff { background-image: url('../menuItems/staff.png'); }
+    .bluestaff { background-image: url('../menuItems/bluestaff.png'); }
+    .boomerang { background-image: url('../menuItems/boomerang.png'); }
+    .bow { background-image: url('../menuItems/bow.png'); }
+    .bow3Arrow { background-image: url('../menuItems/bow3Arrow.png'); }
+    .bow5Arrow { background-image: url('../menuItems/bow5Arrow.png'); }
+    .cape { background-image: url('../menuItems/cape.png'); }
+    .firerod { background-image: url('../menuItems/firerod.png'); }
+    .hammer { background-image: url('../menuItems/hammer.png'); }
+    .hookshot { background-image: url('../menuItems/hookshot.png'); }
+    .icerod { background-image: url('../menuItems/icerod.png'); }
+    .lightrod { background-image: url('../menuItems/lightrod.png'); }
+    .magicbow { background-image: url('../menuItems/magicbow.png'); }
+    .magicbow3Arrow { background-image: url('../menuItems/magicbow3Arrow.png'); }
+    .magicbow5Arrow { background-image: url('../menuItems/magicbow5Arrow.png'); }
+    .staff { background-image: url('../menuItems/staff.png'); }
+    .yellowstaff { background-image: url('../menuItems/yellowstaff.png'); }
+    .green-potion { background-image: url('../menuItems/green-potion.png'); }
+    .red-potion { background-image: url('../menuItems/red-potion.png'); }
+    .blue-potion { background-image: url('../menuItems/blue-potion.png'); }
+    .blue-shield { background-image: url('../menuItems/blue-shield.png'); }
+</style>
+<div class="menuPanel">
+    <table id="items">
+        <tr>
+            <td id="slot1" class="slot"></td>
+            <td id="slot2" class="slot"></td>
+        </tr>
+        <tr>
+            <td id="slot3" class="slot"></td>
+            <td id="slot4" class="slot"></td>
+        </tr>
+        <tr>
+            <td id="slot5" class="slot"></td>
+            <td id="slot6" class="slot"></td>
+        </tr>
+    </table>
+    <p>Use right/left click to swap out active weapon slots.</p>
+    <div class="buttons">
+        <ul>
+            <li><button id="returnToLobbyBtn">Return to Lobby</button></li>
+        </ul>
+    </div>
+</div>

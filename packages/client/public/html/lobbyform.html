@@ -1,0 +1,324 @@
+
+<style>
+    .panel {
+      background-image: url('./images/large-banner.png');
+      background-repeat: no-repeat;
+      background-size: 370px 270px;
+      width: 350px;
+      height: 250px;
+      padding: 10px;
+    }
+
+    .menu {
+        list-style: none;
+    }
+
+    .menu li {
+        font-family: minecraft;
+        color: white;
+        float: left;
+    }
+
+    .menu li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 8px;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .menu li a:hover {
+        background-color: #111111;
+    }
+
+    .menu li a.active {
+        background-color: #222222;
+    }
+
+    .menuPanel {
+        color: white;
+        font-family: minecraft;
+    }
+
+    #playMenu .userDetails {
+        bottom: 15;
+        left: 15;
+        position: absolute;
+    }
+
+    #playMenu .userDetails table tr td { 
+        color: white;
+        font-family: minecraft;
+    }
+
+    #playMenu .msg { 
+        color: white;
+        font-family: minecraft;
+    }
+
+    #playMenu .buttons {
+        bottom: 0;
+        right: 15;
+        position: absolute;
+    }
+
+    #playMenu .buttons ul {
+        list-style: none;
+    }
+
+    #playMenu .buttons ul li {
+        margin: 2px;
+    }
+
+    #playMenu .buttons ul li button {
+        width: 100px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        font-family: minecraft;
+        border: none;
+        background-color: #EFD694;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    #playMenu .buttons ul li button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        background-color: #CEA56B;
+    }
+
+    #playMenu .modeOption {
+        border: solid 1px black;
+        cursor: pointer;
+    }
+
+    #playMenu .modeOption:hover {
+        border: solid 1px #EFD694;
+    }
+
+    #playMenu .selected {
+        border: solid 1px #EFD694;
+    }
+
+    #rankingsMenu .table {
+        margin-top: 20px;
+    }
+
+    #rankingsMenu {
+        color: white;
+    }
+
+    #rankingsMenu .table{
+        width: 70%;
+    }
+
+    #rankingsMenu .row {
+        width: 350px;
+        clear: both;
+        background: inherit;
+        position: relative;
+        color: #fff;
+    }
+
+    #rankingsMenu .row:before {
+        content: ' ';
+        position: absolute;
+        width: 95%;
+        padding-top: 7;
+        border-bottom: 2px dotted #ddd;
+    }
+
+    #rankingsMenu .player {
+        background: black;
+        position: absolute;
+        float: left;
+        z-index: 1;
+        padding-right: 5;
+        padding-left: 15;
+    }
+
+    #rankingsMenu .score {
+        background: black;
+        position: relative;
+        float: right;
+        z-index: 2;
+        padding-left: 5;
+        padding-right: 15;
+    }
+
+    #accountMenu table tr td p {
+        color: white;
+    }
+
+    #accountMenu button {
+        width: 100px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        font-family: minecraft;
+        border: none;
+        background-color: #EFD694;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    #accountMenu button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        background-color: #CEA56B;
+    }
+
+    #accountMenu input {
+        border: none;
+        font-family: minecraft;
+    }
+
+    #accountMenu input[type="password"]:focus, input[type="text"]:focus {
+        outline: 0;
+    }
+
+    #accountMenu .response {
+        font-size: 10px;
+    }
+
+    #settingsMenu table tr td, #settingsMenu table tr th, #settingsMenu div.gameControls p {
+        color: white;
+        font-size: 12;
+    }
+
+    #settingsMenu div.gameControls {
+        position: absolute;
+    }
+</style>
+<div class="panel">
+    <ui class="menu">
+        <li><a id="play" href="###" class="menuItem active">Play</a></li>
+        <li><a id="rankings" href="###" class="menuItem">Rankings</a></li>
+        <li><a id="locker" href="###" class="menuItem">Locker</a></li>
+        <li><a id="settings" href="###" class="menuItem">Settings</a></li>
+        <li><a id="account" href="###" class="menuItem">Account</a></li>
+    </ui>
+    <div style="clear: both;"></div>
+    <div id="playMenu" class="menuPanel">
+        <div id="modes">
+            <table id="gameTable">
+            </table>
+        </div>
+        <div class="userDetails">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="lbl">LVL:</td><td id="lvl">0</td>
+                    </tr>
+                    <tr>
+                        <td class="lbl">XP:</td><td id="xp">0</td>
+                    </tr>
+                    <tr>
+                        <td class="lbl">Matches:</td><td id="matches">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="buttons">
+            <ul>
+                <li><button id="playBtn">Play</button></li>
+                <li><button id="signOutBtn">Sign Out</button></li>
+            </ul>
+        </div>
+    </div>
+    <div id="rankingsMenu" class="menuPanel">
+        
+        <div class="table" id="leaderBoard">
+            <p class="row">
+                <span class="player">Nathan</span>
+                <span class="score">123</span>
+            </p>
+            <p class="row">
+                <span class="player">Nathan2</span>
+                <span class="score">121321323</span>
+            </p>
+        </div>
+    </div>
+    <div id="lockerMenu" class="menuPanel">
+        <h1>Locker coming soon...</h1>
+    </div>
+    <div id="settingsMenu" class="menuPanel">
+        <div class="gameControls" style="left: 20; top: 50">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Basic Controls</th>
+                    </tr>    
+                </thead>
+                <tr>
+                    <td>Left</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Right</td>
+                    <td>D</td>
+                </tr>
+                <tr>
+                    <td>Up</td>
+                    <td>W</td>
+                </tr>
+                <tr>
+                    <td>Down</td>
+                    <td>W</td>
+                </tr>
+                <tr>
+                    <td>Talk</td>
+                    <td>T</td>
+                </tr>
+                <tr>
+                    <td>Open Chest</td>
+                    <td>F</td>
+                </tr>
+            </table>
+        </div>
+        <div class="gameControls" style="left: 150; top: 50">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Combat Controls</th>
+                    </tr>    
+                </thead>
+                <tr>
+                    <td>Primary Weapon</td>
+                    <td>Left Click</td>
+                </tr>
+                <tr>
+                    <td>Secondary Weapon</td>
+                    <td>Right Click</td>
+                </tr>
+                <tr>
+                    <td>Swap Weapon Slot 1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Swap Weapon Slot 2</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Store Weapon</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Place/Detonate Bomb</td>
+                    <td>R</td>
+                </tr>
+            </table>
+        </div>
+        <div class="gameControls" style="left: 10; top: 190">
+            <p>Stored items can be swapped into active position by opening the menu and using left or right click to select. The active item will automatically be placed in your inventory.</p>
+        </div>
+    </div>
+    <div id="accountMenu" class="menuPanel">
+        <table>
+            <tr>
+                <td><p>User Handle: </p></td><td><input type="text" id="handle" /></td>
+            </tr>
+            <tr>
+                <td><button id="updateHandleBtn">Update Handle</button></td><td><span class="response" id="handleMsg"></span></td>
+            </tr>
+        </table>
+    </div>
+</div>

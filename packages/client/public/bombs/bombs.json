@@ -1,0 +1,120 @@
+{
+	"textures": [
+		{
+			"image": "bombs.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 44,
+				"h": 48
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Basic/Explode/explode-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 28,
+						"h": 33
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 26,
+						"h": 31
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 26,
+						"h": 31
+					},
+					"anchor": {
+						"x": 0.60714286,
+						"y": 0.51515152
+					}
+				},
+				{
+					"filename": "Basic/Ticking/bomb-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 14,
+						"h": 17
+					},
+					"frame": {
+						"x": 29,
+						"y": 1,
+						"w": 14,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.61111111
+					}
+				},
+				{
+					"filename": "Basic/Ticking/bomb-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 14,
+						"h": 17
+					},
+					"frame": {
+						"x": 29,
+						"y": 20,
+						"w": 14,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.61111111
+					}
+				},
+				{
+					"filename": "Basic/Explode/explode-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 12,
+						"h": 13
+					},
+					"frame": {
+						"x": 1,
+						"y": 34,
+						"w": 12,
+						"h": 13
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5625
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:e45b58b280a7f0f45ff32e954654eb92:c8020f219bc50d4c31a28d81274bbbd5:6746e94b6b59859045f7e99217b74fd2$"
+	}
+}

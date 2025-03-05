@@ -1,0 +1,520 @@
+{
+	"textures": [
+		{
+			"image": "npcs.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 218,
+				"h": 63
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "agahnim/casting/casting-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 36,
+						"h": 32
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				},
+				{
+					"filename": "agahnim/casting/casting-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 32
+					},
+					"frame": {
+						"x": 39,
+						"y": 1,
+						"w": 36,
+						"h": 32
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				},
+				{
+					"filename": "agahnim/precast/precast-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 77,
+						"y": 1,
+						"w": 32,
+						"h": 32
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				},
+				{
+					"filename": "agahnim/standing/idle-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 30,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 30,
+						"h": 32
+					},
+					"frame": {
+						"x": 111,
+						"y": 1,
+						"w": 30,
+						"h": 32
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				},
+				{
+					"filename": "mary/standing/npc-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 1,
+						"y": 35,
+						"w": 16,
+						"h": 27
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.851852
+					}
+				},
+				{
+					"filename": "mary/standing/npc-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 19,
+						"y": 35,
+						"w": 16,
+						"h": 27
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.851852
+					}
+				},
+				{
+					"filename": "sally/standing/npc-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 37,
+						"y": 35,
+						"w": 16,
+						"h": 27
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.851852
+					}
+				},
+				{
+					"filename": "sally/standing/npc-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 27
+					},
+					"frame": {
+						"x": 55,
+						"y": 35,
+						"w": 16,
+						"h": 27
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.851852
+					}
+				},
+				{
+					"filename": "bobby/standing/npc-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 27,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 27,
+						"h": 34
+					},
+					"frame": {
+						"x": 143,
+						"y": 1,
+						"w": 27,
+						"h": 34
+					},
+					"anchor": {
+						"x": 0.518519,
+						"y": 0.971429
+					}
+				},
+				{
+					"filename": "bobby/standing/npc-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 27,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 27,
+						"h": 34
+					},
+					"frame": {
+						"x": 143,
+						"y": 1,
+						"w": 27,
+						"h": 34
+					},
+					"anchor": {
+						"x": 0.518519,
+						"y": 0.971429
+					}
+				},
+				{
+					"filename": "bobby/standing/npc-3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 35
+					},
+					"frame": {
+						"x": 172,
+						"y": 1,
+						"w": 27,
+						"h": 35
+					},
+					"anchor": {
+						"x": 0.518519,
+						"y": 0.971429
+					}
+				},
+				{
+					"filename": "balu/standing/npc-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 24
+					},
+					"frame": {
+						"x": 201,
+						"y": 1,
+						"w": 16,
+						"h": 24
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.916667
+					}
+				},
+				{
+					"filename": "bobby/standing/npc-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 28,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 28,
+						"h": 24
+					},
+					"frame": {
+						"x": 73,
+						"y": 35,
+						"w": 28,
+						"h": 24
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1.04167
+					}
+				},
+				{
+					"filename": "earl/standing/npc-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 24
+					},
+					"frame": {
+						"x": 201,
+						"y": 27,
+						"w": 16,
+						"h": 24
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.958333
+					}
+				},
+				{
+					"filename": "becky/standing/npc-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 14,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 24
+					},
+					"frame": {
+						"x": 103,
+						"y": 35,
+						"w": 14,
+						"h": 24
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.958333
+					}
+				},
+				{
+					"filename": "jane/standing/npc-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 14,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 24
+					},
+					"frame": {
+						"x": 119,
+						"y": 35,
+						"w": 14,
+						"h": 24
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.916667
+					}
+				},
+				{
+					"filename": "kenzie/standing/npc-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 14,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 24
+					},
+					"frame": {
+						"x": 135,
+						"y": 38,
+						"w": 14,
+						"h": 24
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.916667
+					}
+				},
+				{
+					"filename": "sammy/standing/npc-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 14,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 22
+					},
+					"frame": {
+						"x": 151,
+						"y": 37,
+						"w": 14,
+						"h": 22
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.909091
+					}
+				},
+				{
+					"filename": "timmy/standing/npc-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 14,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 22
+					},
+					"frame": {
+						"x": 167,
+						"y": 38,
+						"w": 14,
+						"h": 22
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.909091
+					}
+				},
+				{
+					"filename": "oldman/standing/man.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 183,
+						"y": 38,
+						"w": 16,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:bee5770af8d070fe05dbbc3127253bab:edb1aa7c0d2cba651e4186e5b4f24cf1:20e8206f418e80657f5bfcdaa8ffa9c7$"
+	}
+}

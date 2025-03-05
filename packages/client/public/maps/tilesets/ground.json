@@ -1,0 +1,14 @@
+{ "columns":26,
+ "image":"..\/..\/..\/..\/netcode-poc\/public\/images\/ground-extruded.png",
+ "imageheight":241,
+ "imagewidth":285,
+ "margin":0,
+ "name":"ground",
+ "spacing":3,
+ "tilecount":572,
+ "tiledversion":"1.7.2",
+ "tileheight":8,
+ "tilewidth":8,
+ "type":"tileset",
+ "version":"1.6"
+}

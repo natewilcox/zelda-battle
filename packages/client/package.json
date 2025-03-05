@@ -1,0 +1,23 @@
+{
+  "name": "@natewilcox/zelda-battle-client",
+  "version": "1.0.0",
+  "description": "client app for zelda battle",
+  "type": "module",
+  "scripts": {
+    "start": "vite"
+  },
+  "author": "Nathan Wilcox",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@natewilcox/zelda-battle-client": "file:",
+    "@natewilcox/zelda-battle-shared": "file:",
+    "bitecs": "^0.3.40",
+    "colyseus.js": "^0.16.9",
+    "phaser": "3.55.2",
+    "regenerator-runtime": "^0.14.1",
+    "short-uuid": "^5.2.0"
+  }
+}

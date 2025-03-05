@@ -1,0 +1,67 @@
+
+<style>
+    .talkForm {
+        background-image: url('./images/banner.png');
+        width: 200px;
+        height: 150px;
+    }
+    
+    .talkForm .fields {
+      padding-top: 0px;
+    }
+  
+    .talkForm textarea {
+      margin-top: 10px;
+      margin-left: 10px;
+      width: 90%;
+      height: 90px;
+      
+      border: none;
+      font-family: minecraft;
+      resize: none;
+    
+    }
+  
+    .talkForm textarea:focus {
+      outline: 0;
+    }
+
+    .talkForm .buttons {
+      margin-top: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  
+    .talkForm #talkBtn {
+      float: left;
+    }
+
+    .talkForm #talkBtn {
+      float: right;
+    }
+  
+    .talkForm .buttons button {
+          width: 75px;
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+          font-family: minecraft;
+          border: none;
+          background-color: #EFD694;
+          cursor: pointer;
+          font-size: 12px;
+          padding: 3px;
+      }
+  
+      .talkForm .buttons button:hover {
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+  
+  </style>
+  <div class="talkForm">
+    <div class="fields">
+      <textarea id="msgBox" maxlength="100"></textarea>
+    </div>
+    <div class="buttons">
+        <button id="talkBtn">Talk</button>
+        <button id="cancelBtn">Cancel</button>
+    </div>
+  </div>

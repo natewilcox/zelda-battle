@@ -1,0 +1,4295 @@
+{
+	"textures": [
+		{
+			"image": "loading.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 127,
+				"h": 1551
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "tri-123.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 45,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 42,
+						"h": 46
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 42,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.51111111,
+						"y": 0.45833333
+					}
+				},
+				{
+					"filename": "tri-166.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 48,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 42,
+						"h": 46
+					},
+					"frame": {
+						"x": 1,
+						"y": 49,
+						"w": 42,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.47916667,
+						"y": 0.60416667
+					}
+				},
+				{
+					"filename": "tri-168.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 49,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 44,
+						"h": 44
+					},
+					"frame": {
+						"x": 45,
+						"y": 1,
+						"w": 44,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.51020408,
+						"y": 0.60416667
+					}
+				},
+				{
+					"filename": "tri-127.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 37,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 35,
+						"h": 46
+					},
+					"frame": {
+						"x": 91,
+						"y": 1,
+						"w": 35,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.48648649,
+						"y": 0.45833333
+					}
+				},
+				{
+					"filename": "tri-91.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 42,
+						"h": 46
+					},
+					"frame": {
+						"x": 1,
+						"y": 97,
+						"w": 42,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.47727273,
+						"y": 0.54901961
+					}
+				},
+				{
+					"filename": "tri-122.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 45,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 43,
+						"h": 44
+					},
+					"frame": {
+						"x": 45,
+						"y": 47,
+						"w": 43,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.48888889,
+						"y": 0.44444444
+					}
+				},
+				{
+					"filename": "tri-76.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 37,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 36,
+						"h": 47
+					},
+					"frame": {
+						"x": 90,
+						"y": 49,
+						"w": 36,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-169.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 45,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 43,
+						"h": 43
+					},
+					"frame": {
+						"x": 45,
+						"y": 93,
+						"w": 43,
+						"h": 43
+					},
+					"anchor": {
+						"x": 0.48888889,
+						"y": 0.60416667
+					}
+				},
+				{
+					"filename": "tri-138.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 39,
+						"h": 47
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 36,
+						"h": 46
+					},
+					"frame": {
+						"x": 90,
+						"y": 98,
+						"w": 36,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.51282051,
+						"y": 0.46808511
+					}
+				},
+				{
+					"filename": "tri-124.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 45,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 41,
+						"h": 46
+					},
+					"frame": {
+						"x": 1,
+						"y": 145,
+						"w": 41,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.48888889,
+						"y": 0.42857143
+					}
+				},
+				{
+					"filename": "tri-125.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 45,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 40,
+						"h": 47
+					},
+					"frame": {
+						"x": 1,
+						"y": 193,
+						"w": 40,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.48888889,
+						"y": 0.42857143
+					}
+				},
+				{
+					"filename": "tri-89.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 40,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 47
+					},
+					"frame": {
+						"x": 1,
+						"y": 242,
+						"w": 40,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-165.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 40,
+						"h": 46
+					},
+					"frame": {
+						"x": 1,
+						"y": 291,
+						"w": 40,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.47619048,
+						"y": 0.57142857
+					}
+				},
+				{
+					"filename": "tri-90.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 43,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 41,
+						"h": 46
+					},
+					"frame": {
+						"x": 1,
+						"y": 339,
+						"w": 41,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.51162791,
+						"y": 0.54166667
+					}
+				},
+				{
+					"filename": "tri-167.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 47,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 42,
+						"h": 45
+					},
+					"frame": {
+						"x": 1,
+						"y": 387,
+						"w": 42,
+						"h": 45
+					},
+					"anchor": {
+						"x": 0.5106383,
+						"y": 0.60416667
+					}
+				},
+				{
+					"filename": "tri-140.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 42,
+						"h": 44
+					},
+					"frame": {
+						"x": 1,
+						"y": 434,
+						"w": 42,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.52272727,
+						"y": 0.48888889
+					}
+				},
+				{
+					"filename": "tri-74.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 43,
+						"h": 47
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 42,
+						"h": 44
+					},
+					"frame": {
+						"x": 1,
+						"y": 480,
+						"w": 42,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-92.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 3,
+						"w": 42,
+						"h": 44
+					},
+					"frame": {
+						"x": 1,
+						"y": 526,
+						"w": 42,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.51923077
+					}
+				},
+				{
+					"filename": "tri-164.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 38,
+						"h": 47
+					},
+					"frame": {
+						"x": 1,
+						"y": 572,
+						"w": 38,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.47727273,
+						"y": 0.54166667
+					}
+				},
+				{
+					"filename": "tri-126.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 41,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 38,
+						"h": 45
+					},
+					"frame": {
+						"x": 1,
+						"y": 621,
+						"w": 38,
+						"h": 45
+					},
+					"anchor": {
+						"x": 0.48780488,
+						"y": 0.42857143
+					}
+				},
+				{
+					"filename": "tri-88.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 40,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 5,
+						"w": 38,
+						"h": 45
+					},
+					"frame": {
+						"x": 1,
+						"y": 668,
+						"w": 38,
+						"h": 45
+					},
+					"anchor": {
+						"x": 0.475,
+						"y": 0.56862745
+					}
+				},
+				{
+					"filename": "tri-139.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 43,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 40,
+						"h": 44
+					},
+					"frame": {
+						"x": 1,
+						"y": 715,
+						"w": 40,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.53488372,
+						"y": 0.47826087
+					}
+				},
+				{
+					"filename": "tri-73.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 43,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 3,
+						"w": 41,
+						"h": 44
+					},
+					"frame": {
+						"x": 1,
+						"y": 761,
+						"w": 41,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-121.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 43
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 41,
+						"h": 43
+					},
+					"frame": {
+						"x": 1,
+						"y": 807,
+						"w": 41,
+						"h": 43
+					},
+					"anchor": {
+						"x": 0.47727273,
+						"y": 0.46511628
+					}
+				},
+				{
+					"filename": "tri-170.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 45,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 3,
+						"w": 43,
+						"h": 43
+					},
+					"frame": {
+						"x": 1,
+						"y": 852,
+						"w": 43,
+						"h": 43
+					},
+					"anchor": {
+						"x": 0.48888889,
+						"y": 0.6122449
+					}
+				},
+				{
+					"filename": "tri-171.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 43,
+						"h": 43
+					},
+					"frame": {
+						"x": 1,
+						"y": 897,
+						"w": 43,
+						"h": 43
+					},
+					"anchor": {
+						"x": 0.47727273,
+						"y": 0.6
+					}
+				},
+				{
+					"filename": "tri-141.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 46,
+						"h": 43
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 44,
+						"h": 41
+					},
+					"frame": {
+						"x": 1,
+						"y": 942,
+						"w": 44,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.52173913,
+						"y": 0.48837209
+					}
+				},
+				{
+					"filename": "tri-75.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 41,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 40,
+						"h": 44
+					},
+					"frame": {
+						"x": 1,
+						"y": 985,
+						"w": 40,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-93.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 41,
+						"h": 43
+					},
+					"frame": {
+						"x": 1,
+						"y": 1031,
+						"w": 41,
+						"h": 43
+					},
+					"anchor": {
+						"x": 0.47619048,
+						"y": 0.52173913
+					}
+				},
+				{
+					"filename": "tri-97.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 43
+					},
+					"frame": {
+						"x": 1,
+						"y": 1076,
+						"w": 41,
+						"h": 43
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.47826087
+					}
+				},
+				{
+					"filename": "tri-117.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 43,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 41,
+						"h": 42
+					},
+					"frame": {
+						"x": 1,
+						"y": 1121,
+						"w": 41,
+						"h": 42
+					},
+					"anchor": {
+						"x": 0.53488372,
+						"y": 0.54545455
+					}
+				},
+				{
+					"filename": "tri-96.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 41,
+						"h": 42
+					},
+					"frame": {
+						"x": 1,
+						"y": 1165,
+						"w": 41,
+						"h": 42
+					},
+					"anchor": {
+						"x": 0.52380952,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-118.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 41,
+						"h": 41
+					},
+					"frame": {
+						"x": 1,
+						"y": 1209,
+						"w": 41,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.52272727,
+						"y": 0.52380952
+					}
+				},
+				{
+					"filename": "tri-119.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 43
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 41,
+						"h": 41
+					},
+					"frame": {
+						"x": 1,
+						"y": 1252,
+						"w": 41,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-95.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 43,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 41
+					},
+					"frame": {
+						"x": 1,
+						"y": 1295,
+						"w": 41,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.48837209,
+						"y": 0.53658537
+					}
+				},
+				{
+					"filename": "tri-98.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 40,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 40,
+						"h": 42
+					},
+					"frame": {
+						"x": 1,
+						"y": 1338,
+						"w": 40,
+						"h": 42
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-116.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 41,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 40,
+						"h": 41
+					},
+					"frame": {
+						"x": 1,
+						"y": 1382,
+						"w": 40,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.53658537,
+						"y": 0.53333333
+					}
+				},
+				{
+					"filename": "tri-87.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 35,
+						"h": 46
+					},
+					"frame": {
+						"x": 1,
+						"y": 1425,
+						"w": 35,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.54
+					}
+				},
+				{
+					"filename": "tri-137.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 33,
+						"h": 47
+					},
+					"frame": {
+						"x": 1,
+						"y": 1473,
+						"w": 33,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.55555556,
+						"y": 0.51020408
+					}
+				},
+				{
+					"filename": "tri-69.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 29
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 28
+					},
+					"frame": {
+						"x": 1,
+						"y": 1522,
+						"w": 41,
+						"h": 28
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.48275862
+					}
+				},
+				{
+					"filename": "tri-151.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 45,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 43,
+						"h": 37
+					},
+					"frame": {
+						"x": 45,
+						"y": 138,
+						"w": 43,
+						"h": 37
+					},
+					"anchor": {
+						"x": 0.51111111,
+						"y": 0.45238095
+					}
+				},
+				{
+					"filename": "tri-100.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 38,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 36,
+						"h": 42
+					},
+					"frame": {
+						"x": 90,
+						"y": 146,
+						"w": 36,
+						"h": 42
+					},
+					"anchor": {
+						"x": 0.55263158,
+						"y": 0.47727273
+					}
+				},
+				{
+					"filename": "tri-149.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 44,
+						"h": 27
+					},
+					"frame": {
+						"x": 44,
+						"y": 177,
+						"w": 44,
+						"h": 27
+					},
+					"anchor": {
+						"x": 0.47727273,
+						"y": 0.46875
+					}
+				},
+				{
+					"filename": "tri-114.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 37,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 41
+					},
+					"frame": {
+						"x": 90,
+						"y": 190,
+						"w": 36,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.51351351,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-150.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 33
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 45,
+						"h": 32
+					},
+					"frame": {
+						"x": 43,
+						"y": 206,
+						"w": 45,
+						"h": 32
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.48484848
+					}
+				},
+				{
+					"filename": "tri-153.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 41,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 36,
+						"h": 41
+					},
+					"frame": {
+						"x": 90,
+						"y": 233,
+						"w": 36,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.46341463,
+						"y": 0.47727273
+					}
+				},
+				{
+					"filename": "tri-145.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 47,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 45,
+						"h": 26
+					},
+					"frame": {
+						"x": 43,
+						"y": 240,
+						"w": 45,
+						"h": 26
+					},
+					"anchor": {
+						"x": 0.4893617,
+						"y": 0.46666667
+					}
+				},
+				{
+					"filename": "tri-120.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 41,
+						"h": 40
+					},
+					"frame": {
+						"x": 43,
+						"y": 268,
+						"w": 41,
+						"h": 40
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-148.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 49,
+						"h": 31
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 47,
+						"h": 26
+					},
+					"frame": {
+						"x": 43,
+						"y": 310,
+						"w": 47,
+						"h": 26
+					},
+					"anchor": {
+						"x": 0.51020408,
+						"y": 0.48387097
+					}
+				},
+				{
+					"filename": "tri-163.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 39,
+						"h": 47
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 34,
+						"h": 45
+					},
+					"frame": {
+						"x": 92,
+						"y": 276,
+						"w": 34,
+						"h": 45
+					},
+					"anchor": {
+						"x": 0.48717949,
+						"y": 0.4893617
+					}
+				},
+				{
+					"filename": "tri-154.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 34,
+						"h": 41
+					},
+					"frame": {
+						"x": 92,
+						"y": 323,
+						"w": 34,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.45238095,
+						"y": 0.46666667
+					}
+				},
+				{
+					"filename": "tri-142.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 47,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 46,
+						"h": 38
+					},
+					"frame": {
+						"x": 44,
+						"y": 338,
+						"w": 46,
+						"h": 38
+					},
+					"anchor": {
+						"x": 0.53191489,
+						"y": 0.51219512
+					}
+				},
+				{
+					"filename": "tri-101.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 35,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 34,
+						"h": 39
+					},
+					"frame": {
+						"x": 92,
+						"y": 366,
+						"w": 34,
+						"h": 39
+					},
+					"anchor": {
+						"x": 0.57142857,
+						"y": 0.48780488
+					}
+				},
+				{
+					"filename": "tri-72.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 41,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 40
+					},
+					"frame": {
+						"x": 45,
+						"y": 378,
+						"w": 41,
+						"h": 40
+					},
+					"anchor": {
+						"x": 0.48780488,
+						"y": 0.47619048
+					}
+				},
+				{
+					"filename": "tri-99.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 38,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 38,
+						"h": 42
+					},
+					"frame": {
+						"x": 88,
+						"y": 407,
+						"w": 38,
+						"h": 42
+					},
+					"anchor": {
+						"x": 0.52631579,
+						"y": 0.48888889
+					}
+				},
+				{
+					"filename": "tri-94.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 41,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 40
+					},
+					"frame": {
+						"x": 45,
+						"y": 420,
+						"w": 41,
+						"h": 40
+					},
+					"anchor": {
+						"x": 0.51219512,
+						"y": 0.52272727
+					}
+				},
+				{
+					"filename": "tri-115.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 39,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 38,
+						"h": 41
+					},
+					"frame": {
+						"x": 88,
+						"y": 451,
+						"w": 38,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.53846154,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-70.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 43,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 41,
+						"h": 32
+					},
+					"frame": {
+						"x": 45,
+						"y": 462,
+						"w": 41,
+						"h": 32
+					},
+					"anchor": {
+						"x": 0.48837209,
+						"y": 0.48571429
+					}
+				},
+				{
+					"filename": "tri-77.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 33,
+						"h": 47
+					},
+					"frame": {
+						"x": 45,
+						"y": 496,
+						"w": 33,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.52777778,
+						"y": 0.49019608
+					}
+				},
+				{
+					"filename": "tri-113.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 35,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 34,
+						"h": 38
+					},
+					"frame": {
+						"x": 45,
+						"y": 545,
+						"w": 34,
+						"h": 38
+					},
+					"anchor": {
+						"x": 0.54285714,
+						"y": 0.52272727
+					}
+				},
+				{
+					"filename": "tri-86.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 34,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 32,
+						"h": 45
+					},
+					"frame": {
+						"x": 41,
+						"y": 585,
+						"w": 32,
+						"h": 45
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.53061224
+					}
+				},
+				{
+					"filename": "tri-128.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 34,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 32,
+						"h": 44
+					},
+					"frame": {
+						"x": 41,
+						"y": 632,
+						"w": 32,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.52941176,
+						"y": 0.45652174
+					}
+				},
+				{
+					"filename": "tri-143.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 37
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 47,
+						"h": 35
+					},
+					"frame": {
+						"x": 41,
+						"y": 678,
+						"w": 47,
+						"h": 35
+					},
+					"anchor": {
+						"x": 0.52,
+						"y": 0.48648649
+					}
+				},
+				{
+					"filename": "tri-71.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 39
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 43,
+						"h": 36
+					},
+					"frame": {
+						"x": 43,
+						"y": 715,
+						"w": 43,
+						"h": 36
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-152.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 39,
+						"h": 40
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 39,
+						"h": 38
+					},
+					"frame": {
+						"x": 44,
+						"y": 753,
+						"w": 39,
+						"h": 38
+					},
+					"anchor": {
+						"x": 0.48717949,
+						"y": 0.45
+					}
+				},
+				{
+					"filename": "tri-136.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 35,
+						"h": 47
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 29,
+						"h": 47
+					},
+					"frame": {
+						"x": 44,
+						"y": 793,
+						"w": 29,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.54285714,
+						"y": 0.4893617
+					}
+				},
+				{
+					"filename": "tri-78.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 33,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 3,
+						"w": 29,
+						"h": 47
+					},
+					"frame": {
+						"x": 46,
+						"y": 842,
+						"w": 29,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.54545455,
+						"y": 0.52941176
+					}
+				},
+				{
+					"filename": "tri-162.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 38,
+						"h": 47
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 31,
+						"h": 45
+					},
+					"frame": {
+						"x": 46,
+						"y": 891,
+						"w": 31,
+						"h": 45
+					},
+					"anchor": {
+						"x": 0.47368421,
+						"y": 0.5106383
+					}
+				},
+				{
+					"filename": "tri-129.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 33,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 28,
+						"h": 43
+					},
+					"frame": {
+						"x": 47,
+						"y": 938,
+						"w": 28,
+						"h": 43
+					},
+					"anchor": {
+						"x": 0.51515152,
+						"y": 0.45454545
+					}
+				},
+				{
+					"filename": "tri-134.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 27,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 1,
+						"w": 20,
+						"h": 47
+					},
+					"frame": {
+						"x": 75,
+						"y": 793,
+						"w": 20,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.55555556,
+						"y": 0.47916667
+					}
+				},
+				{
+					"filename": "tri-135.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 31,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 1,
+						"w": 24,
+						"h": 47
+					},
+					"frame": {
+						"x": 77,
+						"y": 842,
+						"w": 24,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.58064516,
+						"y": 0.49019608
+					}
+				},
+				{
+					"filename": "tri-144.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 48,
+						"h": 33
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 47,
+						"h": 31
+					},
+					"frame": {
+						"x": 79,
+						"y": 891,
+						"w": 47,
+						"h": 31
+					},
+					"anchor": {
+						"x": 0.52083333,
+						"y": 0.48484848
+					}
+				},
+				{
+					"filename": "tri-147.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 48,
+						"h": 26
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 47,
+						"h": 21
+					},
+					"frame": {
+						"x": 79,
+						"y": 924,
+						"w": 47,
+						"h": 21
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-146.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 47,
+						"h": 29
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 46,
+						"h": 24
+					},
+					"frame": {
+						"x": 77,
+						"y": 947,
+						"w": 46,
+						"h": 24
+					},
+					"anchor": {
+						"x": 0.5106383,
+						"y": 0.48275862
+					}
+				},
+				{
+					"filename": "tri-61.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 34
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 3,
+						"w": 29,
+						"h": 28
+					},
+					"frame": {
+						"x": 97,
+						"y": 494,
+						"w": 29,
+						"h": 28
+					},
+					"anchor": {
+						"x": 0.46875,
+						"y": 0.52941176
+					}
+				},
+				{
+					"filename": "tri-79.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 33,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 2,
+						"w": 24,
+						"h": 47
+					},
+					"frame": {
+						"x": 36,
+						"y": 1473,
+						"w": 24,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.57575758,
+						"y": 0.52941176
+					}
+				},
+				{
+					"filename": "tri-62.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 31,
+						"h": 34
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 31,
+						"h": 28
+					},
+					"frame": {
+						"x": 44,
+						"y": 1522,
+						"w": 31,
+						"h": 28
+					},
+					"anchor": {
+						"x": 0.48387097,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-161.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 38,
+						"h": 47
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 0,
+						"w": 26,
+						"h": 46
+					},
+					"frame": {
+						"x": 38,
+						"y": 1425,
+						"w": 26,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.46808511
+					}
+				},
+				{
+					"filename": "tri-80.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 25,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 2,
+						"w": 20,
+						"h": 47
+					},
+					"frame": {
+						"x": 62,
+						"y": 1473,
+						"w": 20,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.56,
+						"y": 0.52
+					}
+				},
+				{
+					"filename": "tri-50.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 23,
+						"h": 31
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 20,
+						"h": 28
+					},
+					"frame": {
+						"x": 77,
+						"y": 1522,
+						"w": 20,
+						"h": 28
+					},
+					"anchor": {
+						"x": 0.47826087,
+						"y": 0.48387097
+					}
+				},
+				{
+					"filename": "tri-111.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 39
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 39
+					},
+					"frame": {
+						"x": 99,
+						"y": 973,
+						"w": 27,
+						"h": 39
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-131.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 26,
+						"h": 49
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 3,
+						"w": 20,
+						"h": 44
+					},
+					"frame": {
+						"x": 77,
+						"y": 973,
+						"w": 20,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.48979592
+					}
+				},
+				{
+					"filename": "tri-103.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 29,
+						"h": 39
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 28,
+						"h": 39
+					},
+					"frame": {
+						"x": 47,
+						"y": 983,
+						"w": 28,
+						"h": 39
+					},
+					"anchor": {
+						"x": 0.55172414,
+						"y": 0.48717949
+					}
+				},
+				{
+					"filename": "tri-85.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 47
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 28,
+						"h": 43
+					},
+					"frame": {
+						"x": 44,
+						"y": 1024,
+						"w": 28,
+						"h": 43
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.53191489
+					}
+				},
+				{
+					"filename": "tri-130.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 29,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 25,
+						"h": 44
+					},
+					"frame": {
+						"x": 44,
+						"y": 1069,
+						"w": 25,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.51724138,
+						"y": 0.47826087
+					}
+				},
+				{
+					"filename": "tri-84.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 29,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 25,
+						"h": 43
+					},
+					"frame": {
+						"x": 44,
+						"y": 1115,
+						"w": 25,
+						"h": 43
+					},
+					"anchor": {
+						"x": 0.48275862,
+						"y": 0.52173913
+					}
+				},
+				{
+					"filename": "tri-160.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 27,
+						"h": 47
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 3,
+						"w": 22,
+						"h": 44
+					},
+					"frame": {
+						"x": 44,
+						"y": 1160,
+						"w": 22,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.48148148,
+						"y": 0.5106383
+					}
+				},
+				{
+					"filename": "tri-83.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 28,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 3,
+						"w": 20,
+						"h": 44
+					},
+					"frame": {
+						"x": 44,
+						"y": 1206,
+						"w": 20,
+						"h": 44
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-132.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 25,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 1,
+						"w": 16,
+						"h": 46
+					},
+					"frame": {
+						"x": 44,
+						"y": 1252,
+						"w": 16,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.52,
+						"y": 0.45833333
+					}
+				},
+				{
+					"filename": "tri-34.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 15,
+						"h": 23
+					},
+					"frame": {
+						"x": 80,
+						"y": 496,
+						"w": 15,
+						"h": 23
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-102.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 33,
+						"h": 39
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 31,
+						"h": 38
+					},
+					"frame": {
+						"x": 44,
+						"y": 1300,
+						"w": 31,
+						"h": 38
+					},
+					"anchor": {
+						"x": 0.57575758,
+						"y": 0.48717949
+					}
+				},
+				{
+					"filename": "tri-112.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 34,
+						"h": 39
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 31,
+						"h": 37
+					},
+					"frame": {
+						"x": 43,
+						"y": 1340,
+						"w": 31,
+						"h": 37
+					},
+					"anchor": {
+						"x": 0.55882353,
+						"y": 0.56410256
+					}
+				},
+				{
+					"filename": "tri-155.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 37,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 2,
+						"w": 28,
+						"h": 40
+					},
+					"frame": {
+						"x": 43,
+						"y": 1379,
+						"w": 28,
+						"h": 40
+					},
+					"anchor": {
+						"x": 0.48648649,
+						"y": 0.45652174
+					}
+				},
+				{
+					"filename": "tri-133.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 23,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 1,
+						"w": 14,
+						"h": 46
+					},
+					"frame": {
+						"x": 62,
+						"y": 1252,
+						"w": 14,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.47826087,
+						"y": 0.47916667
+					}
+				},
+				{
+					"filename": "tri-59.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 26,
+						"h": 31
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 23,
+						"h": 29
+					},
+					"frame": {
+						"x": 103,
+						"y": 524,
+						"w": 23,
+						"h": 29
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.51612903
+					}
+				},
+				{
+					"filename": "tri-156.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 37,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 3,
+						"w": 24,
+						"h": 38
+					},
+					"frame": {
+						"x": 85,
+						"y": 753,
+						"w": 24,
+						"h": 38
+					},
+					"anchor": {
+						"x": 0.51351351,
+						"y": 0.45652174
+					}
+				},
+				{
+					"filename": "tri-81.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 3,
+						"w": 14,
+						"h": 46
+					},
+					"frame": {
+						"x": 97,
+						"y": 793,
+						"w": 14,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-48.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 27,
+						"h": 29
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 23,
+						"h": 26
+					},
+					"frame": {
+						"x": 103,
+						"y": 841,
+						"w": 23,
+						"h": 26
+					},
+					"anchor": {
+						"x": 0.51851852,
+						"y": 0.48275862
+					}
+				},
+				{
+					"filename": "tri-107.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 17,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 13,
+						"h": 39
+					},
+					"frame": {
+						"x": 113,
+						"y": 555,
+						"w": 13,
+						"h": 39
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-82.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 16,
+						"h": 46
+					},
+					"frame": {
+						"x": 75,
+						"y": 585,
+						"w": 16,
+						"h": 46
+					},
+					"anchor": {
+						"x": 0.45833333,
+						"y": 0.50980392
+					}
+				},
+				{
+					"filename": "tri-159.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 26,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 0,
+						"w": 16,
+						"h": 43
+					},
+					"frame": {
+						"x": 75,
+						"y": 633,
+						"w": 16,
+						"h": 43
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.45652174
+					}
+				},
+				{
+					"filename": "tri-63.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 33,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 33,
+						"h": 26
+					},
+					"frame": {
+						"x": 93,
+						"y": 596,
+						"w": 33,
+						"h": 26
+					},
+					"anchor": {
+						"x": 0.51515152,
+						"y": 0.46875
+					}
+				},
+				{
+					"filename": "tri-110.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 27,
+						"h": 43
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 25,
+						"h": 40
+					},
+					"frame": {
+						"x": 93,
+						"y": 624,
+						"w": 25,
+						"h": 40
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-105.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 25,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 21,
+						"h": 41
+					},
+					"frame": {
+						"x": 66,
+						"y": 1421,
+						"w": 21,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-157.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 29,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 2,
+						"w": 18,
+						"h": 40
+					},
+					"frame": {
+						"x": 73,
+						"y": 1379,
+						"w": 18,
+						"h": 40
+					},
+					"anchor": {
+						"x": 0.48275862,
+						"y": 0.47727273
+					}
+				},
+				{
+					"filename": "tri-65.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 37,
+						"h": 29
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 4,
+						"w": 37,
+						"h": 21
+					},
+					"frame": {
+						"x": 89,
+						"y": 1421,
+						"w": 37,
+						"h": 21
+					},
+					"anchor": {
+						"x": 0.51351351,
+						"y": 0.48275862
+					}
+				},
+				{
+					"filename": "tri-66.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 39,
+						"h": 26
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 4,
+						"w": 37,
+						"h": 18
+					},
+					"frame": {
+						"x": 89,
+						"y": 1444,
+						"w": 37,
+						"h": 18
+					},
+					"anchor": {
+						"x": 0.48717949,
+						"y": 0.46153846
+					}
+				},
+				{
+					"filename": "tri-104.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 27,
+						"h": 39
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 24,
+						"h": 39
+					},
+					"frame": {
+						"x": 84,
+						"y": 1464,
+						"w": 24,
+						"h": 39
+					},
+					"anchor": {
+						"x": 0.55555556,
+						"y": 0.48717949
+					}
+				},
+				{
+					"filename": "tri-106.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 16,
+						"h": 41
+					},
+					"frame": {
+						"x": 110,
+						"y": 1464,
+						"w": 16,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-13.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 17,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 15,
+						"h": 15
+					},
+					"frame": {
+						"x": 84,
+						"y": 1505,
+						"w": 15,
+						"h": 15
+					},
+					"anchor": {
+						"x": 0.47058824,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-60.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 26,
+						"h": 31
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 25,
+						"h": 29
+					},
+					"frame": {
+						"x": 101,
+						"y": 1507,
+						"w": 25,
+						"h": 29
+					},
+					"anchor": {
+						"x": 0.46153846,
+						"y": 0.58064516
+					}
+				},
+				{
+					"filename": "tri-15.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 17,
+						"h": 12
+					},
+					"frame": {
+						"x": 99,
+						"y": 1538,
+						"w": 17,
+						"h": 12
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.47058824
+					}
+				},
+				{
+					"filename": "tri-109.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 23,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 21,
+						"h": 41
+					},
+					"frame": {
+						"x": 74,
+						"y": 1024,
+						"w": 21,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-158.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 46
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 2,
+						"w": 14,
+						"h": 41
+					},
+					"frame": {
+						"x": 71,
+						"y": 1069,
+						"w": 14,
+						"h": 41
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-68.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 42,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 39,
+						"h": 23
+					},
+					"frame": {
+						"x": 87,
+						"y": 1067,
+						"w": 39,
+						"h": 23
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.46428571
+					}
+				},
+				{
+					"filename": "tri-67.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 41,
+						"h": 23
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 39,
+						"h": 21
+					},
+					"frame": {
+						"x": 87,
+						"y": 1092,
+						"w": 39,
+						"h": 21
+					},
+					"anchor": {
+						"x": 0.48780488,
+						"y": 0.47826087
+					}
+				},
+				{
+					"filename": "tri-53.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 14,
+						"h": 28
+					},
+					"frame": {
+						"x": 71,
+						"y": 1112,
+						"w": 14,
+						"h": 28
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-64.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 37,
+						"h": 29
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 3,
+						"w": 35,
+						"h": 22
+					},
+					"frame": {
+						"x": 87,
+						"y": 1115,
+						"w": 35,
+						"h": 22
+					},
+					"anchor": {
+						"x": 0.51351351,
+						"y": 0.48275862
+					}
+				},
+				{
+					"filename": "tri-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 2,
+						"w": 6,
+						"h": 17
+					},
+					"frame": {
+						"x": 120,
+						"y": 624,
+						"w": 6,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.53846154,
+						"y": 0.6
+					}
+				},
+				{
+					"filename": "tri-108.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 40
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 17,
+						"h": 39
+					},
+					"frame": {
+						"x": 68,
+						"y": 1160,
+						"w": 17,
+						"h": 39
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 19,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 15,
+						"h": 16
+					},
+					"frame": {
+						"x": 71,
+						"y": 1142,
+						"w": 15,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.47368421,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-45.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 25,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 24
+					},
+					"frame": {
+						"x": 88,
+						"y": 1139,
+						"w": 24,
+						"h": 24
+					},
+					"anchor": {
+						"x": 0.48,
+						"y": 0.41666667
+					}
+				},
+				{
+					"filename": "tri-32.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 23
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 12,
+						"h": 22
+					},
+					"frame": {
+						"x": 114,
+						"y": 1139,
+						"w": 12,
+						"h": 22
+					},
+					"anchor": {
+						"x": 0.4375,
+						"y": 0.47826087
+					}
+				},
+				{
+					"filename": "tri-49.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 25,
+						"h": 31
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 3,
+						"w": 22,
+						"h": 27
+					},
+					"frame": {
+						"x": 87,
+						"y": 1165,
+						"w": 22,
+						"h": 27
+					},
+					"anchor": {
+						"x": 0.48,
+						"y": 0.51612903
+					}
+				},
+				{
+					"filename": "tri-52.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 29
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 16,
+						"h": 28
+					},
+					"frame": {
+						"x": 81,
+						"y": 555,
+						"w": 16,
+						"h": 28
+					},
+					"anchor": {
+						"x": 0.44444444,
+						"y": 0.51724138
+					}
+				},
+				{
+					"filename": "tri-33.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 23
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 14,
+						"h": 22
+					},
+					"frame": {
+						"x": 80,
+						"y": 521,
+						"w": 14,
+						"h": 22
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.47826087
+					}
+				},
+				{
+					"filename": "tri-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 3,
+						"w": 5,
+						"h": 16
+					},
+					"frame": {
+						"x": 96,
+						"y": 524,
+						"w": 5,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.46153846,
+						"y": 0.57142857
+					}
+				},
+				{
+					"filename": "tri-30.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 23
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 2,
+						"w": 7,
+						"h": 20
+					},
+					"frame": {
+						"x": 103,
+						"y": 869,
+						"w": 7,
+						"h": 20
+					},
+					"anchor": {
+						"x": 0.46666667,
+						"y": 0.56521739
+					}
+				},
+				{
+					"filename": "tri-12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 19
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 15,
+						"h": 16
+					},
+					"frame": {
+						"x": 111,
+						"y": 1165,
+						"w": 15,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-23.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 15,
+						"h": 15
+					},
+					"frame": {
+						"x": 111,
+						"y": 1183,
+						"w": 15,
+						"h": 15
+					},
+					"anchor": {
+						"x": 0.44444444,
+						"y": 0.47058824
+					}
+				},
+				{
+					"filename": "tri-54.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 12,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 27
+					},
+					"frame": {
+						"x": 99,
+						"y": 555,
+						"w": 11,
+						"h": 27
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-40.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 25,
+						"h": 26
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 23,
+						"h": 23
+					},
+					"frame": {
+						"x": 93,
+						"y": 666,
+						"w": 23,
+						"h": 23
+					},
+					"anchor": {
+						"x": 0.48,
+						"y": 0.42307692
+					}
+				},
+				{
+					"filename": "tri-41.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 23,
+						"h": 23
+					},
+					"frame": {
+						"x": 90,
+						"y": 691,
+						"w": 23,
+						"h": 23
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.48
+					}
+				},
+				{
+					"filename": "tri-46.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 26,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 23,
+						"h": 25
+					},
+					"frame": {
+						"x": 88,
+						"y": 716,
+						"w": 23,
+						"h": 25
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.44
+					}
+				},
+				{
+					"filename": "tri-56.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 13,
+						"h": 26
+					},
+					"frame": {
+						"x": 113,
+						"y": 716,
+						"w": 13,
+						"h": 26
+					},
+					"anchor": {
+						"x": 0.46666667,
+						"y": 0.53571429
+					}
+				},
+				{
+					"filename": "tri-26.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 11,
+						"h": 17
+					},
+					"frame": {
+						"x": 115,
+						"y": 691,
+						"w": 11,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.46153846,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-24.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 15,
+						"h": 15
+					},
+					"frame": {
+						"x": 111,
+						"y": 744,
+						"w": 15,
+						"h": 15
+					},
+					"anchor": {
+						"x": 0.44444444,
+						"y": 0.52941176
+					}
+				},
+				{
+					"filename": "tri-22.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 15,
+						"h": 14
+					},
+					"frame": {
+						"x": 111,
+						"y": 761,
+						"w": 15,
+						"h": 14
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 13,
+						"h": 17
+					},
+					"frame": {
+						"x": 113,
+						"y": 777,
+						"w": 13,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 13,
+						"h": 16
+					},
+					"frame": {
+						"x": 113,
+						"y": 796,
+						"w": 13,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.46666667,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-25.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 13,
+						"h": 16
+					},
+					"frame": {
+						"x": 113,
+						"y": 814,
+						"w": 13,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.46666667,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-17.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 22,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 17,
+						"h": 9
+					},
+					"frame": {
+						"x": 93,
+						"y": 585,
+						"w": 17,
+						"h": 9
+					},
+					"anchor": {
+						"x": 0.45454545,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-55.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 31
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 9,
+						"h": 28
+					},
+					"frame": {
+						"x": 66,
+						"y": 1206,
+						"w": 9,
+						"h": 28
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-51.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 23,
+						"h": 31
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 18,
+						"h": 27
+					},
+					"frame": {
+						"x": 77,
+						"y": 1201,
+						"w": 18,
+						"h": 27
+					},
+					"anchor": {
+						"x": 0.43478261,
+						"y": 0.51612903
+					}
+				},
+				{
+					"filename": "tri-47.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 27,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 23,
+						"h": 25
+					},
+					"frame": {
+						"x": 97,
+						"y": 1200,
+						"w": 23,
+						"h": 25
+					},
+					"anchor": {
+						"x": 0.48148148,
+						"y": 0.44444444
+					}
+				},
+				{
+					"filename": "tri-7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 11,
+						"h": 17
+					},
+					"frame": {
+						"x": 112,
+						"y": 869,
+						"w": 11,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-42.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 23,
+						"h": 23
+					},
+					"frame": {
+						"x": 99,
+						"y": 1014,
+						"w": 23,
+						"h": 23
+					},
+					"anchor": {
+						"x": 0.45833333,
+						"y": 0.4
+					}
+				},
+				{
+					"filename": "tri-57.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 19,
+						"h": 29
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 16,
+						"h": 26
+					},
+					"frame": {
+						"x": 97,
+						"y": 1039,
+						"w": 16,
+						"h": 26
+					},
+					"anchor": {
+						"x": 0.47368421,
+						"y": 0.55172414
+					}
+				},
+				{
+					"filename": "tri-8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 19
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 11,
+						"h": 17
+					},
+					"frame": {
+						"x": 115,
+						"y": 1039,
+						"w": 11,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.46153846,
+						"y": 0.57894737
+					}
+				},
+				{
+					"filename": "tri-58.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 19,
+						"h": 31
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 19,
+						"h": 27
+					},
+					"frame": {
+						"x": 76,
+						"y": 1340,
+						"w": 19,
+						"h": 27
+					},
+					"anchor": {
+						"x": 0.52631579,
+						"y": 0.5483871
+					}
+				},
+				{
+					"filename": "tri-43.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 26
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 23,
+						"h": 23
+					},
+					"frame": {
+						"x": 97,
+						"y": 1227,
+						"w": 23,
+						"h": 23
+					},
+					"anchor": {
+						"x": 0.45833333,
+						"y": 0.42307692
+					}
+				},
+				{
+					"filename": "tri-35.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 26
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 17,
+						"h": 23
+					},
+					"frame": {
+						"x": 78,
+						"y": 1230,
+						"w": 17,
+						"h": 23
+					},
+					"anchor": {
+						"x": 0.55,
+						"y": 0.46153846
+					}
+				},
+				{
+					"filename": "tri-36.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 22,
+						"h": 26
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 19,
+						"h": 23
+					},
+					"frame": {
+						"x": 78,
+						"y": 1255,
+						"w": 19,
+						"h": 23
+					},
+					"anchor": {
+						"x": 0.54545455,
+						"y": 0.46153846
+					}
+				},
+				{
+					"filename": "tri-38.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 21,
+						"h": 23
+					},
+					"frame": {
+						"x": 99,
+						"y": 1252,
+						"w": 21,
+						"h": 23
+					},
+					"anchor": {
+						"x": 0.54166667,
+						"y": 0.44444444
+					}
+				},
+				{
+					"filename": "tri-37.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 22,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 3,
+						"w": 20,
+						"h": 23
+					},
+					"frame": {
+						"x": 78,
+						"y": 1280,
+						"w": 20,
+						"h": 23
+					},
+					"anchor": {
+						"x": 0.54545455,
+						"y": 0.51851852
+					}
+				},
+				{
+					"filename": "tri-44.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 25,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 23,
+						"h": 23
+					},
+					"frame": {
+						"x": 77,
+						"y": 1305,
+						"w": 23,
+						"h": 23
+					},
+					"anchor": {
+						"x": 0.48,
+						"y": 0.41666667
+					}
+				},
+				{
+					"filename": "tri-39.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 23,
+						"h": 25
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 21,
+						"h": 22
+					},
+					"frame": {
+						"x": 100,
+						"y": 1277,
+						"w": 21,
+						"h": 22
+					},
+					"anchor": {
+						"x": 0.52173913,
+						"y": 0.44
+					}
+				},
+				{
+					"filename": "tri-14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 19,
+						"h": 15
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 17,
+						"h": 13
+					},
+					"frame": {
+						"x": 102,
+						"y": 1301,
+						"w": 17,
+						"h": 13
+					},
+					"anchor": {
+						"x": 0.47368421,
+						"y": 0.46666667
+					}
+				},
+				{
+					"filename": "tri-21.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 19,
+						"h": 15
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 17,
+						"h": 12
+					},
+					"frame": {
+						"x": 102,
+						"y": 1316,
+						"w": 17,
+						"h": 12
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-31.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 23
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 9,
+						"h": 21
+					},
+					"frame": {
+						"x": 97,
+						"y": 1330,
+						"w": 9,
+						"h": 21
+					},
+					"anchor": {
+						"x": 0.53846154,
+						"y": 0.52173913
+					}
+				},
+				{
+					"filename": "tri-27.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 12,
+						"h": 19
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 108,
+						"y": 1330,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 19
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 9,
+						"h": 16
+					},
+					"frame": {
+						"x": 97,
+						"y": 1353,
+						"w": 9,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.42857143,
+						"y": 0.57894737
+					}
+				},
+				{
+					"filename": "tri-28.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 9,
+						"h": 18
+					},
+					"frame": {
+						"x": 108,
+						"y": 1349,
+						"w": 9,
+						"h": 18
+					},
+					"anchor": {
+						"x": 0.46666667,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-29.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 7,
+						"h": 19
+					},
+					"frame": {
+						"x": 119,
+						"y": 1349,
+						"w": 7,
+						"h": 19
+					},
+					"anchor": {
+						"x": 0.46153846,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 7,
+						"h": 17
+					},
+					"frame": {
+						"x": 118,
+						"y": 666,
+						"w": 7,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.46153846,
+						"y": 0.58823529
+					}
+				},
+				{
+					"filename": "tri-6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 19
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 9,
+						"h": 17
+					},
+					"frame": {
+						"x": 93,
+						"y": 1371,
+						"w": 9,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.57894737
+					}
+				},
+				{
+					"filename": "tri-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 15,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 1,
+						"w": 7,
+						"h": 16
+					},
+					"frame": {
+						"x": 93,
+						"y": 1390,
+						"w": 7,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.46666667,
+						"y": 0.61111111
+					}
+				},
+				{
+					"filename": "tri-16.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 19,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 17,
+						"h": 11
+					},
+					"frame": {
+						"x": 93,
+						"y": 1408,
+						"w": 17,
+						"h": 11
+					},
+					"anchor": {
+						"x": 0.47368421,
+						"y": 0.4375
+					}
+				},
+				{
+					"filename": "tri-19.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 17,
+						"h": 10
+					},
+					"frame": {
+						"x": 104,
+						"y": 1371,
+						"w": 17,
+						"h": 10
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 17,
+						"h": 9
+					},
+					"frame": {
+						"x": 104,
+						"y": 1383,
+						"w": 17,
+						"h": 9
+					},
+					"anchor": {
+						"x": 0.45,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "tri-20.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 18,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 17,
+						"h": 10
+					},
+					"frame": {
+						"x": 102,
+						"y": 1394,
+						"w": 17,
+						"h": 10
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.57142857
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:77b73138478bf3a72ceb9aba940a58e8:126253f691ba5d23a80823c1d356da20:5294b8b30e478db5089d68a09bebcee6$"
+	}
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@natewilcox/zelda-battle-shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch"
+  },
+  "author": "Nathan Wilcox",
+  "license": "ISC",
+  "dependencies": {
+    "@colyseus/command": "^0.3.1",
+    "@colyseus/schema": "^3.0.16",
+    "@natewilcox/zelda-battle-shared": "file:",
+    "build": "^0.1.4",
+    "generate-unique-id": "^2.0.3"
+  }
+}

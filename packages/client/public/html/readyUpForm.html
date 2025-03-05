@@ -1,0 +1,48 @@
+
+<style>
+
+    .readyUpPanel {
+        width: 400px;
+        height: 300px;
+    }
+
+    .readyUpPanel .buttons {
+        bottom: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    .readyUpPanel .buttons ul {
+        list-style: none;
+    }
+
+    .readyUpPanel .buttons ul li {
+        margin: 2px;
+    }
+
+    .readyUpPanel .buttons ul li button {
+        width: 150px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        font-family: minecraft;
+        border: none;
+        background-color: #EFD694;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    .readyUpPanel .buttons ul li button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        background-color: #CEA56B;
+    }
+
+</style>
+<div class="readyUpPanel">
+
+    <div class="buttons">
+        <ul>
+            <li><button id="playAgainBtn">Play Again</button></li>
+            <li><button id="returnToLobbyBtn">Return to Lobby</button></li>
+        </ul>
+    </div>
+</div>

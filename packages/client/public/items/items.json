@@ -1,0 +1,995 @@
+{
+	"textures": [
+		{
+			"image": "items.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 30,
+				"h": 352
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "FiftyRupees/Idle/rupees.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 17,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 17
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 17,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.529412,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "OneArrow/Idle/arrow.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 9,
+						"h": 19
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 9,
+						"h": 19
+					},
+					"frame": {
+						"x": 20,
+						"y": 1,
+						"w": 9,
+						"h": 19
+					},
+					"anchor": {
+						"x": 0.555556,
+						"y": 0.789474
+					}
+				},
+				{
+					"filename": "FiftyRupees/item/rupees.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 17,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 17
+					},
+					"frame": {
+						"x": 1,
+						"y": 20,
+						"w": 17,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "OneArrow/Item/arrow.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 9,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 9,
+						"h": 17
+					},
+					"frame": {
+						"x": 20,
+						"y": 22,
+						"w": 9,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.555556,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "TenArrows/Idle/arrows.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 19
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 19
+					},
+					"frame": {
+						"x": 1,
+						"y": 39,
+						"w": 16,
+						"h": 19
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.842105
+					}
+				},
+				{
+					"filename": "MagicJar/Idle/magic-jar.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 19
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 19
+					},
+					"frame": {
+						"x": 19,
+						"y": 41,
+						"w": 10,
+						"h": 19
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.789474
+					}
+				},
+				{
+					"filename": "EightBombs/Idle/bombs.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 18
+					},
+					"frame": {
+						"x": 1,
+						"y": 60,
+						"w": 16,
+						"h": 18
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.833333
+					}
+				},
+				{
+					"filename": "SmallKey/Idle/key.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 18
+					},
+					"frame": {
+						"x": 19,
+						"y": 62,
+						"w": 10,
+						"h": 18
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.8888888888888888
+					}
+				},
+				{
+					"filename": "FourBombs/Idle/bombs.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 18
+					},
+					"frame": {
+						"x": 1,
+						"y": 80,
+						"w": 16,
+						"h": 18
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.833333
+					}
+				},
+				{
+					"filename": "BlueRupee/idle/blue-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 19,
+						"y": 82,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "TenArrows/Item/arrows.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 18
+					},
+					"frame": {
+						"x": 1,
+						"y": 100,
+						"w": 16,
+						"h": 18
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.894737
+					}
+				},
+				{
+					"filename": "BlueRupee/idle/blue-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 19,
+						"y": 101,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "TenBombs/Idle/bombs.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 18
+					},
+					"frame": {
+						"x": 1,
+						"y": 120,
+						"w": 16,
+						"h": 18
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.833333
+					}
+				},
+				{
+					"filename": "BlueRupee/idle/blue-3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 19,
+						"y": 120,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "GreenRupee/idle/green-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 19,
+						"y": 139,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "GreenRupee/spawn/green-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 19,
+						"y": 139,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "EightBombs/Item/bombs.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 17
+					},
+					"frame": {
+						"x": 1,
+						"y": 140,
+						"w": 16,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "GreenRupee/idle/green-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 19,
+						"y": 158,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "FourBombs/Item/bombs.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 17
+					},
+					"frame": {
+						"x": 1,
+						"y": 159,
+						"w": 16,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "GreenRupee/idle/green-3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 19,
+						"y": 177,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "FullHeart/Idle/full-heart.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 1,
+						"y": 178,
+						"w": 16,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.8125
+					}
+				},
+				{
+					"filename": "TenBombs/Items/bombs.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 1,
+						"y": 196,
+						"w": 16,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.9375
+					}
+				},
+				{
+					"filename": "MagicJar/Item/magic-jar.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 19,
+						"y": 196,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "FullHeart/Item/full-heart.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 15
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 15
+					},
+					"frame": {
+						"x": 1,
+						"y": 214,
+						"w": 16,
+						"h": 15
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.866667
+					}
+				},
+				{
+					"filename": "RedRupee/idle/red-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 19,
+						"y": 215,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "OneBomb/Item/bomb.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 15,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 16
+					},
+					"frame": {
+						"x": 1,
+						"y": 231,
+						"w": 15,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.466667,
+						"y": 0.9375
+					}
+				},
+				{
+					"filename": "RedRupee/idle/red-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 18,
+						"y": 234,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "OneBomb/Idle/bomb.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 14,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 18
+					},
+					"frame": {
+						"x": 1,
+						"y": 249,
+						"w": 14,
+						"h": 18
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.833333
+					}
+				},
+				{
+					"filename": "FiveArrows/Idle/arrows.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 12,
+						"h": 19
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 12,
+						"h": 19
+					},
+					"frame": {
+						"x": 17,
+						"y": 253,
+						"w": 12,
+						"h": 19
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.947368
+					}
+				},
+				{
+					"filename": "FiveArrows/Item/arrows.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 12,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 12,
+						"h": 18
+					},
+					"frame": {
+						"x": 1,
+						"y": 269,
+						"w": 12,
+						"h": 18
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.888889
+					}
+				},
+				{
+					"filename": "RedRupee/idle/red-3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 15,
+						"y": 274,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "SmallKey/Item/key.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 17
+					},
+					"frame": {
+						"x": 1,
+						"y": 289,
+						"w": 10,
+						"h": 17
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.94117647
+					}
+				},
+				{
+					"filename": "BlueRupee/item/blue-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 16
+					},
+					"frame": {
+						"x": 13,
+						"y": 293,
+						"w": 10,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "GreenRupee/item/green-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 16
+					},
+					"frame": {
+						"x": 1,
+						"y": 308,
+						"w": 10,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "RedRupee/item/red-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 10,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 16
+					},
+					"frame": {
+						"x": 13,
+						"y": 311,
+						"w": 10,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.882353
+					}
+				},
+				{
+					"filename": "MagicBottle/Idle/magic-bottle.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 12
+					},
+					"frame": {
+						"x": 1,
+						"y": 326,
+						"w": 10,
+						"h": 12
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.666667
+					}
+				},
+				{
+					"filename": "SmallHeart/Idle/heart.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 11
+					},
+					"frame": {
+						"x": 1,
+						"y": 340,
+						"w": 10,
+						"h": 11
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.727273
+					}
+				},
+				{
+					"filename": "MagicBottle/Item/magic-bottle.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 10
+					},
+					"frame": {
+						"x": 13,
+						"y": 329,
+						"w": 10,
+						"h": 10
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.8
+					}
+				},
+				{
+					"filename": "SmallHeart/Item/small-heart.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 9
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 9
+					},
+					"frame": {
+						"x": 13,
+						"y": 341,
+						"w": 10,
+						"h": 9
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.888889
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:8b4c878be4e4e372d586a61d7f06c849:64af770326e2eb2570500d8d0a015dd6:110e074689c9edd2c54833ce2e4d9270$"
+	}
+}

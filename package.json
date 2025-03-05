@@ -1,0 +1,17 @@
+{
+  "name": "@natewilcox/zelda-battle",
+  "version": "1.0.0",
+  "description": "Zelda battle game.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nathan Wilcox",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@natewilcox/zelda-battle": "file:",
+    "@natewilcox/zelda-battle-shared": "file:"
+  }
+}

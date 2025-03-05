@@ -35,10 +35,10 @@ export class OnLeaveCommand extends Command<BattleRoyaleRoom, Payload> {
 
         //update firebase when player disconnects if the data is not synced.
         //This is needed for unplanned disconnects
-        if(!player.dataSynced) {
-            await this.room.firebase.saveGameResults(player);
-            player.dataSynced = true;
-        }
+        // if(!player.dataSynced) {
+        //     await this.room.firebase.saveGameResults(player);
+        //     player.dataSynced = true;
+        // }
 
         //find the client object by session id.
         const client = this.room.clients.find(c => c.id === sessionId);

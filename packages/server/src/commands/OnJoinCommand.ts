@@ -73,7 +73,7 @@ export class OnJoinCommand extends Command<BattleRoyaleRoom, Payload> {
         );
 
         //add player state to list of current players
-        this.room.state.playerStates.set(client.sessionId, playerState);
+        this.room.state.playerStates.push(playerState);
 
         //broadcast message to other clients about the joining player.
         this.room.broadcast(ServerMessages.Message, `${handle} has joined the match`, {
@@ -89,14 +89,14 @@ export class OnJoinCommand extends Command<BattleRoyaleRoom, Payload> {
 
             //if more there are the minimum clients joined, start a time based on the percentage
             if(this.room.clients.length >= minClients) {
-                
+               
                 //if room is half full, only wait 10 seconds for more players
                 //else, lets wait 30
                 if(this.room.clients.length >= (this.room.maxClients * 0.5)) {
-                    //this.room.state.timer = 10;
+                    this.room.state.timer = 10;
                 }
                 else {
-                    //this.room.state.timer = 30;
+                    this.room.state.timer = 30;
                 }
            
                 //remove all existing handlers for tick event

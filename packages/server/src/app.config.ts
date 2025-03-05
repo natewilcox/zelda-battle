@@ -3,8 +3,7 @@ import { monitor } from "@colyseus/monitor";
 import { playground } from "@colyseus/playground";
 import { BattleRoyaleRoom } from "./rooms/BattleRoyaleRoom";
 import { OnJoinCommand } from "./commands/OnJoinCommand";
-// import { StartGameCommand } from "./commands/StartGameCommand";
-//import { simulationConfig } from "./rooms/simulation/ServerSimulationScenes";
+import { StartGameCommand } from "./commands/StartGameCommand";
 
 export const mapFiles = new Map([
     ['overworld1', '../../maps/overworld1.json'],
@@ -25,11 +24,10 @@ export default config({
          */
         gameServer.define('room_1', BattleRoyaleRoom, { 
             mapName: 'overworld1', 
-            minClients: 2,
+            minClients: 1,
             maxClients: 10,
             joinCommand: OnJoinCommand,
-            //startCommand: StartGameCommand,
-            //simulationConfig: simulationConfig,
+            startCommand: StartGameCommand
         });
 
     },

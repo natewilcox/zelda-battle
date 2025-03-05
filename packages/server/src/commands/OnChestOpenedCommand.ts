@@ -36,7 +36,7 @@ export class OnChestOpenedCommand extends Command<BattleRoyaleRoom, Payload> {
         
         //find the player and chest states before continuing
         const player = this.room.state.playerStates.find(s => s.clientId == client.id);
-        const chest = room.state.chestStates.find(c => c.id === id) as ChestState;
+        const chest = room.state.chestStates.find((c: any) => c.id === id) as ChestState;
 
         if(!player || !chest || chest.opened) return;
 

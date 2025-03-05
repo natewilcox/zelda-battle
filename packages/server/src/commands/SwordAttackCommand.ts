@@ -31,7 +31,7 @@ export class SwordAttackCommand extends Command<BattleRoyaleRoom, Payload> {
         if(player == null) return;
 
         //console.log(`[${player.x},${player.y}] using ${texture} towards ${dir}`);
-        this.swordAttack(client, player, texture, dir, 1, this.room.state.simulation.scene.getScene('SimulationScene'));
+        this.swordAttack(client, player, texture, dir, 1, this.room.simulation.scene.getScene('SimulationScene'));
     }
 
     private swordAttack = (client, player: IPlayerState, texture: GameTextures, dir: Direction, hitboxMulti: number, scene: Phaser.Scene) => {

@@ -607,7 +607,7 @@ export default class GameScene extends Phaser.Scene {
         this.world = createWorld();
 
         //fetch my state from room
-        const myState = roomState.playerStates.get(this.serverService.sessionId);
+        const myState = roomState.playerStates.find(p => p.clientId == this.serverService.sessionId);
         if(!myState) return;
 
         console.log(myState)
@@ -638,13 +638,13 @@ export default class GameScene extends Phaser.Scene {
         this.postUpdatePipeline = pipe(this.dialogSystem!);
 
         //add map objects
-        // roomState.switches.forEach(obj => {
+        roomState.switches.forEach(obj => {
             
-        //     const switchObj = this.switches.get(obj.x, obj.y);
-        //     switchObj.anims.play(texturesIndex[obj.texture]);
-        // });
+            const switchObj = this.switches.get(obj.x, obj.y);
+            switchObj.anims.play(texturesIndex[obj.texture]);
+        });
 
-        //this.input.mouse.disableContextMenu();
+        this.input.mouse.disableContextMenu();
 
         //handler for creating new player entities
         const createPlayerHandler = (playerState) => {

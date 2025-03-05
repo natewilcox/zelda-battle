@@ -29,7 +29,7 @@ export class OnPlayerStateChangeCommand extends Command<BattleRoyaleRoom, Payloa
      */
     execute({ payloadId, x, y, d, ls, s, t, h }: Payload) {
 
-        const currentState = this.state.playerStates.get(payloadId);
+        const currentState = this.state.playerStates.find(p => p.clientId === payloadId);
     
         //dont update when player is hurt state
         if(currentState && currentState.state != LinkState.Hurt) {

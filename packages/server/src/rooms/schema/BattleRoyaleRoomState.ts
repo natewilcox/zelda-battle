@@ -1,6 +1,6 @@
 import generateUniqueId  from 'generate-unique-id';
 import '@geckos.io/phaser-on-nodejs'
-import { Schema, ArraySchema, type, MapSchema } from '@colyseus/schema';
+import { Schema, ArraySchema, type } from '@colyseus/schema';
 import { IPlayerState } from '@natewilcox/zelda-battle-shared';
 import { PlayerState } from './PlayerState';
 import { ChestState } from './ChestState';
@@ -33,8 +33,8 @@ export class BattleRoyaleRoomState extends Schema implements IBattleRoyaleRoomSt
   @type('number') 
   gameState: GameState = GameState.New;
 
-  @type({ map: PlayerState }) 
-  playerStates: MapSchema<IPlayerState> = new MapSchema<IPlayerState>();
+  @type([PlayerState]) 
+  playerStates: ArraySchema<IPlayerState> = new ArraySchema<IPlayerState>();
 
   @type([ChestState])
   chestStates: ArraySchema<IChestState> = new ArraySchema<IChestState>();

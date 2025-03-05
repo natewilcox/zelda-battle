@@ -29,10 +29,10 @@ export class DisconnectCommand extends Command<BattleRoyaleRoom, Payload> {
         if(!player) return;
 
         //sync the data to the server
-        if(!player.dataSynced) {
-            await this.room.firebase.saveGameResults(player);
-            player.dataSynced = true;
-        }
+        // if(!player.dataSynced) {
+        //     await this.room.firebase.saveGameResults(player);
+        //     player.dataSynced = true;
+        // }
 
         client.send(ServerMessages.Disconnected)
     }

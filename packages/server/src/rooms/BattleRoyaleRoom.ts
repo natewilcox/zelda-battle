@@ -3,44 +3,44 @@ import Phaser from 'phaser';
 import { Command, Dispatcher } from '@colyseus/command';
 import { Room, Client } from 'colyseus';
 import { ClientMessages } from '@natewilcox/zelda-battle-shared';
-//import { OnLeaveCommand } from '../commands/OnLeaveCommand';
-// import { OnChestOpenedCommand } from '../commands/OnChestOpenedCommand';
-// import { HitTargetsCommand } from '../commands/HitTargetsCommand';
+import { OnLeaveCommand } from '../commands/OnLeaveCommand';
+import { OnChestOpenedCommand } from '../commands/OnChestOpenedCommand';
+import { HitTargetsCommand } from '../commands/HitTargetsCommand';
 import { OnPlayerStateChangeCommand } from '../commands/OnPlayerStateChangeCommand';
 import { OnItemCollectedCommand } from '../commands/OnItemCollectedCommand';
-// import { BreakTileCommand } from '../commands/BreakTileCommand';
-// import { FireBowCommand } from '../commands/FireBowCommand';
-// import { BulletCollisionCommand } from '../commands/BulletCollisionCommand';
-// import { OpenDynamicChestCommand } from '../commands/OpenDynamicChestCommand';
-// import { PlaceBombCommand } from '../commands/PlaceBombCommand';
-// import { DetonateBombCommand } from '../commands/DetonateBombCommand';
-// import { UseCapeCommand } from '../commands/UseCapeCommand';
-// import { ServerMessages } from '@natewilcox/zelda-battle-shared';
-// import { PlaceBlockCommand } from '../commands/PlaceBlockCommand';
-// import { ShootLighteningCommand } from '../commands/ShootLighteningCommand';
-// import { CreateShieldCommand } from '../commands/CreateShieldCommand';
-// import { ShootFireballCommand } from '../commands/ShootFireballCommand';
-// import { ShootIceblastCommand } from '../commands/ShootIceblastCommand';
-// import { ShootLightBallCommand } from '../commands/ShootLightBallCommand';
-// import { TalkCommand } from '../commands/TalkCommand';
-// import { StoreItemCommand } from '../commands/StoreItemCommand';
-// import { SwitchWeaponCommand } from '../commands/SwitchWeaponCommand';
-// import { UsePotionCommand } from '../commands/UsePotionCommand';
-// import { GameTextures } from '@natewilcox/zelda-battle-shared';
-// import { AuditPlayerMovementCommand } from '../commands/AuditPlayerMovementsCommand';
-// import { NPCAICommand } from '../commands/NPCAICommand';
-// import { DisconnectCommand } from '../commands/DisconnectCommand';
+import { BreakTileCommand } from '../commands/BreakTileCommand';
+import { FireBowCommand } from '../commands/FireBowCommand';
+import { BulletCollisionCommand } from '../commands/BulletCollisionCommand';
+import { OpenDynamicChestCommand } from '../commands/OpenDynamicChestCommand';
+import { PlaceBombCommand } from '../commands/PlaceBombCommand';
+import { DetonateBombCommand } from '../commands/DetonateBombCommand';
+import { UseCapeCommand } from '../commands/UseCapeCommand';
+import { ServerMessages } from '@natewilcox/zelda-battle-shared';
+import { PlaceBlockCommand } from '../commands/PlaceBlockCommand';
+import { ShootLighteningCommand } from '../commands/ShootLighteningCommand';
+import { CreateShieldCommand } from '../commands/CreateShieldCommand';
+import { ShootFireballCommand } from '../commands/ShootFireballCommand';
+import { ShootIceblastCommand } from '../commands/ShootIceblastCommand';
+import { ShootLightBallCommand } from '../commands/ShootLightBallCommand';
+import { TalkCommand } from '../commands/TalkCommand';
+import { StoreItemCommand } from '../commands/StoreItemCommand';
+import { SwitchWeaponCommand } from '../commands/SwitchWeaponCommand';
+import { UsePotionCommand } from '../commands/UsePotionCommand';
+import { GameTextures } from '@natewilcox/zelda-battle-shared';
+import { AuditPlayerMovementCommand } from '../commands/AuditPlayerMovementsCommand';
+import { NPCAICommand } from '../commands/NPCAICommand';
+import { DisconnectCommand } from '../commands/DisconnectCommand';
 import { BattleRoyaleRoomState } from './schema/BattleRoyaleRoomState';
 import { GameState } from '@natewilcox/zelda-battle-shared';
 import { mapFiles } from '../app.config';
-// import { OpenLockedDoorCommand } from '../commands/OpenLockedDoorCommand';
+import { OpenLockedDoorCommand } from '../commands/OpenLockedDoorCommand';
 //import '@geckos.io/phaser-on-nodejs';
 //import Phaser from 'phaser';
 import { ServerSimulationScene, SimulationEvents } from './simulation/ServerSimulationScenes';
-// import { SwordAttackCommand } from '../commands/SwordAttackCommand';
-// import { DestroyEnemyCommand } from '../commands/DestroyEnemyCommand';
-// import { HurtPlayerCommand } from '../commands/HurtPlayerCommand';
-// import { DestroyPlayerCommand } from '../commands/DestroyPlayerCommand';
+import { SwordAttackCommand } from '../commands/SwordAttackCommand';
+import { DestroyEnemyCommand } from '../commands/DestroyEnemyCommand';
+import { HurtPlayerCommand } from '../commands/HurtPlayerCommand';
+import { DestroyPlayerCommand } from '../commands/DestroyPlayerCommand';
 
 export const gameInputCache = new Map<string, any>();
 
@@ -154,223 +154,223 @@ export class BattleRoyaleRoom extends Room<BattleRoyaleRoomState> {
       });
     });
 
-    // //event listener when a client tries to open a chest
-    // this.onMessage(ClientMessages.ChestOpened, (client, data) => {
+    //event listener when a client tries to open a chest
+    this.onMessage(ClientMessages.ChestOpened, (client, data) => {
       
-    //   this.dispatcher.dispatch(new OnChestOpenedCommand(), {
-    //     id: data.id,
-    //     who: data.who,
-    //     client: client,
-    //     room: this
-    //   });
-    // });
+      this.dispatcher.dispatch(new OnChestOpenedCommand(), {
+        id: data.id,
+        who: data.who,
+        client: client,
+        room: this
+      });
+    });
 
-    // //event listener whe a client chops a bush
-    // this.onMessage(ClientMessages.BreakTile, (client, data) => {
-    //   this.dispatcher.dispatch(new BreakTileCommand(), data);
-    // });
+    //event listener whe a client chops a bush
+    this.onMessage(ClientMessages.BreakTile, (client, data) => {
+      this.dispatcher.dispatch(new BreakTileCommand(), data);
+    });
 
-    // //event listener when a player hits another player
-    // this.onMessage(ClientMessages.HitTarget, (client, data) => {
-    //   this.dispatcher.dispatch(new HitTargetsCommand(), {
-    //     client: client,
-    //     dispatcher: this.dispatcher,
-    //     ...data
-    //   });
-    // });
+    //event listener when a player hits another player
+    this.onMessage(ClientMessages.HitTarget, (client, data) => {
+      this.dispatcher.dispatch(new HitTargetsCommand(), {
+        client: client,
+        dispatcher: this.dispatcher,
+        ...data
+      });
+    });
 
-    // //listen for someone shooting arrow
-    // this.onMessage(ClientMessages.ShootArrow, (client, data) => {
-    //   this.dispatcher.dispatch(new FireBowCommand(), {
-    //     client,
-    //     ...data
-    //   });
-    // });
+    //listen for someone shooting arrow
+    this.onMessage(ClientMessages.ShootArrow, (client, data) => {
+      this.dispatcher.dispatch(new FireBowCommand(), {
+        client,
+        ...data
+      });
+    });
 
-    // //listen for bullet collision
-    // this.onMessage(ClientMessages.BulletCollision, (client, data) => {
-    //   this.dispatcher.dispatch(new BulletCollisionCommand(), {
-    //     client: client,
-    //     dispatcher: this.dispatcher,
-    //     ...data
-    //   });
-    // });
+    //listen for bullet collision
+    this.onMessage(ClientMessages.BulletCollision, (client, data) => {
+      this.dispatcher.dispatch(new BulletCollisionCommand(), {
+        client: client,
+        dispatcher: this.dispatcher,
+        ...data
+      });
+    });
 
-    // //list for open chest events
-    // this.onMessage(ClientMessages.OpenDynamicChest, (client, data) => {
-    //   this.dispatcher.dispatch(new OpenDynamicChestCommand(), {
-    //     client,
-    //     ...data
-    //   });
-    // });
+    //list for open chest events
+    this.onMessage(ClientMessages.OpenDynamicChest, (client, data) => {
+      this.dispatcher.dispatch(new OpenDynamicChestCommand(), {
+        client,
+        ...data
+      });
+    });
 
-    // //list for bomb to be placed
-    // this.onMessage(ClientMessages.PlaceBomb, (client, data) => {
-    //   this.dispatcher.dispatch(new PlaceBombCommand(), {
-    //     client,
-    //     ...data
-    //   });
-    // });
+    //list for bomb to be placed
+    this.onMessage(ClientMessages.PlaceBomb, (client, data) => {
+      this.dispatcher.dispatch(new PlaceBombCommand(), {
+        client,
+        ...data
+      });
+    });
 
-    // //list for bomb to be detonated
-    // this.onMessage(ClientMessages.DetonateBomb, (client, data) => {
-    //   this.dispatcher.dispatch(new DetonateBombCommand(), {
-    //     client,
-    //     dispatcher: this.dispatcher,
-    //     ...data
-    //   });
-    // });
+    //list for bomb to be detonated
+    this.onMessage(ClientMessages.DetonateBomb, (client, data) => {
+      this.dispatcher.dispatch(new DetonateBombCommand(), {
+        client,
+        dispatcher: this.dispatcher,
+        ...data
+      });
+    });
 
-    // //list for bomb to be detonated
-    // this.onMessage(ClientMessages.UseCape, (client, data) => {
-    //   this.dispatcher.dispatch(new UseCapeCommand(), {
-    //     client,
-    //     ...data
-    //   });
-    // });
+    //list for bomb to be detonated
+    this.onMessage(ClientMessages.UseCape, (client, data) => {
+      this.dispatcher.dispatch(new UseCapeCommand(), {
+        client,
+        ...data
+      });
+    });
 
-    // //listen for magic shield to be created
-    // this.onMessage(ClientMessages.CreateShield, (client, data) => {
-    //   this.dispatcher.dispatch(new CreateShieldCommand(), {
-    //     client,
-    //     ...data
-    //   });
-    // });
+    //listen for magic shield to be created
+    this.onMessage(ClientMessages.CreateShield, (client, data) => {
+      this.dispatcher.dispatch(new CreateShieldCommand(), {
+        client,
+        ...data
+      });
+    });
 
-    // //handler for ping requests
-    // this.onMessage(ClientMessages.PING, (client) => {
-    //   client.send(ServerMessages.PONG);
-    // });
+    //handler for ping requests
+    this.onMessage(ClientMessages.PING, (client) => {
+      client.send(ServerMessages.PONG);
+    });
 
-    // //handler for placing block
-    // this.onMessage(ClientMessages.PlaceBlock, (client, data) => {
-    //   this.dispatcher.dispatch(new PlaceBlockCommand(), {
-    //     client,
-    //     ...data
-    //   });
-    // });
+    //handler for placing block
+    this.onMessage(ClientMessages.PlaceBlock, (client, data) => {
+      this.dispatcher.dispatch(new PlaceBlockCommand(), {
+        client,
+        ...data
+      });
+    });
 
-    // this.onMessage(ClientMessages.ShootLightening, (client, data) => {
-    //   this.dispatcher.dispatch(new ShootLighteningCommand(), {
-    //     client,
-    //     dispatcher: this.dispatcher,
-    //     ...data
-    //   });
-    // });
+    this.onMessage(ClientMessages.ShootLightening, (client, data) => {
+      this.dispatcher.dispatch(new ShootLighteningCommand(), {
+        client,
+        dispatcher: this.dispatcher,
+        ...data
+      });
+    });
 
-    // this.onMessage(ClientMessages.ShootFireball, (client, data) => {
-    //   this.dispatcher.dispatch(new ShootFireballCommand(), {
-    //     client,
-    //     dispatcher: this.dispatcher,
-    //     ...data
-    //   });
-    // });
+    this.onMessage(ClientMessages.ShootFireball, (client, data) => {
+      this.dispatcher.dispatch(new ShootFireballCommand(), {
+        client,
+        dispatcher: this.dispatcher,
+        ...data
+      });
+    });
 
-    // this.onMessage(ClientMessages.ShootIceblast, (client, data) => {
-    //   this.dispatcher.dispatch(new ShootIceblastCommand(), {
-    //     client,
-    //     dispatcher: this.dispatcher,
-    //     ...data
-    //   });
-    // });
+    this.onMessage(ClientMessages.ShootIceblast, (client, data) => {
+      this.dispatcher.dispatch(new ShootIceblastCommand(), {
+        client,
+        dispatcher: this.dispatcher,
+        ...data
+      });
+    });
 
-    // this.onMessage(ClientMessages.ShootLightBall, (client, data) => {
-    //   this.dispatcher.dispatch(new ShootLightBallCommand(), {
-    //     client,
-    //     dispatcher: this.dispatcher,
-    //     ...data
-    //   });
-    // });
+    this.onMessage(ClientMessages.ShootLightBall, (client, data) => {
+      this.dispatcher.dispatch(new ShootLightBallCommand(), {
+        client,
+        dispatcher: this.dispatcher,
+        ...data
+      });
+    });
 
-    // this.onMessage(ClientMessages.Talk, (client, data) => {
-    //   this.dispatcher.dispatch(new TalkCommand(), {
-    //     ...data,
-    //     client: client
-    //   });
-    // });
+    this.onMessage(ClientMessages.Talk, (client, data) => {
+      this.dispatcher.dispatch(new TalkCommand(), {
+        ...data,
+        client: client
+      });
+    });
 
-    // this.onMessage(ClientMessages.ItemStored, (client, data) => {
-    //   this.dispatcher.dispatch(new StoreItemCommand(), {
-    //     ...data,
-    //     client: client
-    //   });
-    // });
+    this.onMessage(ClientMessages.ItemStored, (client, data) => {
+      this.dispatcher.dispatch(new StoreItemCommand(), {
+        ...data,
+        client: client
+      });
+    });
 
-    // this.onMessage(ClientMessages.SwitchWeaponFromBag, (client, data) => {
-    //   this.dispatcher.dispatch(new SwitchWeaponCommand(), {
-    //     ...data,
-    //     client: client
-    //   });
-    // });
+    this.onMessage(ClientMessages.SwitchWeaponFromBag, (client, data) => {
+      this.dispatcher.dispatch(new SwitchWeaponCommand(), {
+        ...data,
+        client: client
+      });
+    });
 
-    // this.onMessage(ClientMessages.UseGreenPotion, (client, data) => {
-    //   this.dispatcher.dispatch(new UsePotionCommand(), {
-    //     ...data,
-    //     client: client,
-    //     texture: GameTextures.GreenPotion
-    //   });
-    // });
+    this.onMessage(ClientMessages.UseGreenPotion, (client, data) => {
+      this.dispatcher.dispatch(new UsePotionCommand(), {
+        ...data,
+        client: client,
+        texture: GameTextures.GreenPotion
+      });
+    });
 
-    // this.onMessage(ClientMessages.UseBluePotion, (client, data) => {
-    //   this.dispatcher.dispatch(new UsePotionCommand(), {
-    //     ...data,
-    //     client: client,
-    //     texture: GameTextures.BluePotion
-    //   });
-    // });
+    this.onMessage(ClientMessages.UseBluePotion, (client, data) => {
+      this.dispatcher.dispatch(new UsePotionCommand(), {
+        ...data,
+        client: client,
+        texture: GameTextures.BluePotion
+      });
+    });
 
-    // this.onMessage(ClientMessages.UseRedPotion, (client, data) => {
-    //   this.dispatcher.dispatch(new UsePotionCommand(), {
-    //     ...data,
-    //     client: client,
-    //     texture: GameTextures.RedPotion
-    //   });
-    // });
+    this.onMessage(ClientMessages.UseRedPotion, (client, data) => {
+      this.dispatcher.dispatch(new UsePotionCommand(), {
+        ...data,
+        client: client,
+        texture: GameTextures.RedPotion
+      });
+    });
 
-    // this.onMessage(ClientMessages.Disconnect, (client, data) => {
-    //   this.dispatcher.dispatch(new DisconnectCommand(), {
-    //     ...data,
-    //     client: client
-    //   });
-    // });
+    this.onMessage(ClientMessages.Disconnect, (client, data) => {
+      this.dispatcher.dispatch(new DisconnectCommand(), {
+        ...data,
+        client: client
+      });
+    });
 
-    // this.onMessage(ClientMessages.OpenLockedDoor, (client, data) => {
-    //   this.dispatcher.dispatch(new OpenLockedDoorCommand(), {
-    //     ...data,
-    //     client: client
-    //   });
-    // });
+    this.onMessage(ClientMessages.OpenLockedDoor, (client, data) => {
+      this.dispatcher.dispatch(new OpenLockedDoorCommand(), {
+        ...data,
+        client: client
+      });
+    });
 
-    // this.onMessage(ClientMessages.SwordAttack, (client, data) => {
-    //   this.dispatcher.dispatch(new SwordAttackCommand(), {
-    //     ...data,
-    //     client: client
-    //   });
-    // });
+    this.onMessage(ClientMessages.SwordAttack, (client, data) => {
+      this.dispatcher.dispatch(new SwordAttackCommand(), {
+        ...data,
+        client: client
+      });
+    });
 
-    // //listen for simulation events
-    // SimulationEvents.on('onplayerremoved', (event) => {
-    //   this.dispatcher.dispatch(new DestroyPlayerCommand(), event);
-    // });
+    //listen for simulation events
+    SimulationEvents.on('onplayerremoved', (event) => {
+      this.dispatcher.dispatch(new DestroyPlayerCommand(), event);
+    });
 
-    // SimulationEvents.on('onemenyremoved', (event) => {
-    //   this.dispatcher.dispatch(new DestroyEnemyCommand(), event);
-    // });
+    SimulationEvents.on('onemenyremoved', (event) => {
+      this.dispatcher.dispatch(new DestroyEnemyCommand(), event);
+    });
 
-    // SimulationEvents.on('onenemycollision', (event) => {
-    //   this.dispatcher.dispatch(new HurtPlayerCommand(), {
-    //     enemyState: event.enemyState,
-    //     playerState: event.playerState,
-    //     x: event.enemyState.x,
-    //     y: event.enemyState.y
-    //   });
-    // });
+    SimulationEvents.on('onenemycollision', (event) => {
+      this.dispatcher.dispatch(new HurtPlayerCommand(), {
+        enemyState: event.enemyState,
+        playerState: event.playerState,
+        x: event.enemyState.x,
+        y: event.enemyState.y
+      });
+    });
 
     
-    // //start auditing of player actions
-    // //const playerAuditData = new Map<number, {x:number, y:number}>();
-    // //this.dispatcher.dispatch(new AuditPlayerMovementCommand(), { playerAuditData });
-    // this.dispatcher.dispatch(new NPCAICommand(), { });
+    //start auditing of player actions
+    const playerAuditData = new Map<number, {x:number, y:number}>();
+    this.dispatcher.dispatch(new AuditPlayerMovementCommand(), { playerAuditData });
+    this.dispatcher.dispatch(new NPCAICommand(), { });
   }
 
 
@@ -404,9 +404,9 @@ export class BattleRoyaleRoom extends Room<BattleRoyaleRoomState> {
    */
   onLeave (client: Client, consented: boolean) {
 
-    // this.dispatcher.dispatch(new OnLeaveCommand(), {
-    //   sessionId: client.id
-    // });
+    this.dispatcher.dispatch(new OnLeaveCommand(), {
+      sessionId: client.id
+    });
   }
 
 

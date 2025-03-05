@@ -1,6 +1,5 @@
 import type { Dispatcher } from "@colyseus/command";
 import { Schema } from "@colyseus/schema";
-//import { BattleRoyaleRoom } from "../rooms/BattleRoyaleRoom";
 import { GameTextures } from "./Animations";
 import { IPlayerState } from "./IPlayerState";
 
@@ -12,6 +11,6 @@ export interface INPCState extends Schema {
     anim: string;
     texture: GameTextures;
 
-    //processNearPlayers: (players: IPlayerState[], dispatcher: Dispatcher<BattleRoyaleRoom>) => void;
+    processNearPlayers: (players: IPlayerState[], dispatcher: any) => void;
     onProcess: (cb: () => void) => void;
 }

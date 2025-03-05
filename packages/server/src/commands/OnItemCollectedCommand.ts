@@ -47,7 +47,7 @@ export class OnItemCollectedCommand extends Command<BattleRoyaleRoom, Payload> {
 
         //get item reference
         const item = room.state.itemStates.find(i => i.id === id) as ItemState;
-        const player = room.state.playerStates.get(who + "") as PlayerState;
+        const player = room.state.playerStates.find(p => p.id === who) as PlayerState;
 
         //return if item|player is not available
         if(item == null || player == null) return;

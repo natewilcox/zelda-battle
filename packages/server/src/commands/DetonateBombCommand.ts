@@ -55,7 +55,7 @@ export class DetonateBombCommand extends Command<BattleRoyaleRoom, Payload> {
             weapon: GameTextures.Bomb,
             x: x,
             y: y,
-            targetList: damagedPlayers
+            targetList: damagedPlayers as any
         })];
     }
 }

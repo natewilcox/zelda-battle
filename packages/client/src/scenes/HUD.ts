@@ -726,7 +726,7 @@ export default class HUD extends Phaser.Scene {
         //if we are waiting for players, show a message
         if(state == GameState.WaitingForPlayers) {
 
-            const message = `Waiting for players... ${roomState.playerStates.size} of ${roomState.maxPlayers}`;
+            const message = `Waiting for players... ${roomState.playerStates.length} of ${roomState.maxPlayers}`;
 
             //create the message if it doesnt exist. otherwise, just update the text
             this.stateMessage = this.add.bitmapText(200, 220, 'minecraft', message);

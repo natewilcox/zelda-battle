@@ -144,7 +144,7 @@ export class StartGameCommand extends Command<BattleRoyaleRoom, Payload> {
         return { x, y };
     }
 
-    private tickHandler = (timer) => {
+    private tickHandler = (timer: number) => {
         
         //if the game is not in progress, do not change storm
         if(this.room.state.gameState !== GameState.InProgress) return;

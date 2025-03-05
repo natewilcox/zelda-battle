@@ -41,6 +41,7 @@ export class BreakTileCommand extends Command<BattleRoyaleRoom, Payload> {
         if(canWeaponBreakTile(weapon, texture)) {
 
             //update maptiles
+            // TODO FIX
             //this.room.state.map.groundLayer.mutateTile(x, y);
 
             //create a new mutation for this spot on the map.

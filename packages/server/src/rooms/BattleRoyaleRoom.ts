@@ -93,10 +93,25 @@ export class BattleRoyaleRoom extends Room<BattleRoyaleRoomState> {
     this.gameTicker();
     this.maxClients = options.maxClients;
 
-    // // //fetch drop rates from database
-    // // this.itemDropRate = await this.firebase.getDropRate('drop-rate', true, 0);
-    // // this.weaponDropRate = await this.firebase.getDropRate('drop-rate', true, 1);
-    // // this.floorDropRate = await this.firebase.getDropRate('floor-drop-rate', true, 0);
+    //fetch drop rates from database
+    this.itemDropRate = [
+      [GameTextures.RedRupee, 1],
+      [GameTextures.BlueRupee, 5],
+      [GameTextures.GreenRupee, 10],
+      [GameTextures.OneArrow, 10],
+      [GameTextures.OneBomb, 5],
+      [GameTextures.SmallHeart, 10],
+      [GameTextures.MagicBottle, 5],
+      [GameTextures.MagicJar, 1]
+    ];
+
+    this.weaponDropRate = [
+      [GameTextures.Sword1, 100]
+    ]
+
+    this.floorDropRate = [
+      [GameTextures.GreenRupee, 100]
+    ]
 
     //dynamically load and cache map input game input map
     const mapJson = await require(mapFiles.get(options.mapName)!);

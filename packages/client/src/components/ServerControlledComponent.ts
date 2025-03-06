@@ -45,7 +45,8 @@ export default class ServerControlledComponent implements IComponent {
     start() {
 
         //add event handlers to state object
-        this.remotePlayerState.onChange = (changes) => this.playerStateChangeHandler;
+        // TODO - does this even do anything?!
+        //this.remotePlayerState.onChange = (changes) => this.playerStateChangeHandler;
     }
 
     /**

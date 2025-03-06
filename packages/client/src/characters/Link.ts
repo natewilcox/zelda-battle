@@ -853,65 +853,65 @@ export class Link extends Character {
 
     playFrozen(freeze: boolean) {
         console.warn("not implemented")
-        // if(freeze) {
+        if(freeze) {
 
-        //     this.scene.playSparkleFlash(this.x, this.y);
-        //     this.linkSprite.anims.pause()
-        //     this.linkSprite.setTintFill(0xb1e9f1);
+            this.scene.playSparkleFlash(this.x, this.y);
+            this.linkSprite.anims.pause()
+            this.linkSprite.setTintFill(0xb1e9f1);
     
-        //     this.frozenParticle = this.scene.add.particles('sparkle');
-        //     this.freezeEmitter = this.frozenParticle.setDepth(40).createEmitter({
-        //         x: this.x,
-        //         y: this.y,
-        //         emitZone: {
-        //             source: new Phaser.Geom.Circle(0, 0, 8),
-        //             type: 'random',
-        //             quantity: 2
-        //         },
-        //         scale: { start: 1, end: 0 },
-        //         blendMode: 'MULTI',
-        //         active: true,
-        //         lifespan: 150,
-        //         frequency: 500
-        //     });
+            this.frozenParticle = this.scene.add.particles('sparkle');
+            this.freezeEmitter = this.frozenParticle.setDepth(40).createEmitter({
+                x: this.x,
+                y: this.y,
+                emitZone: {
+                    source: new Phaser.Geom.Circle(0, 0, 8),
+                    type: 'random',
+                    quantity: 2
+                },
+                scale: { start: 1, end: 0 },
+                blendMode: 'MULTI',
+                active: true,
+                lifespan: 150,
+                frequency: 500
+            });
 
-        //     const originalHeight = this.linkSprite.displayOriginY;
-        //     const maxHeight = this.linkSprite.displayOriginY + 5;
-        //     const bounceHeight = this.linkSprite.displayOriginY + 2;
+            const originalHeight = this.linkSprite.displayOriginY;
+            const maxHeight = this.linkSprite.displayOriginY + 5;
+            const bounceHeight = this.linkSprite.displayOriginY + 2;
 
-        //     this.scene.tweens.timeline({
-        //         targets: this.linkSprite,
-        //         tweens:[
-        //             { 
-        //                 displayOriginY: { value: maxHeight },
-        //                 duration: 100,
-        //                 delay: 0
-        //             },
-        //             { 
-        //                 displayOriginY: { value: originalHeight },
-        //                 duration: 100,
-        //                 delay: 0
-        //             },
-        //             { 
-        //                 displayOriginY: { value: bounceHeight },
-        //                 duration: 50,
-        //                 delay: 0
-        //             },
-        //             { 
-        //                 displayOriginY: { value: originalHeight },
-        //                 duration: 50,
-        //                 delay: 0
-        //             },
-        //         ]
-        //     });
-        // }
-        // else {
-        //     this.linkSprite.clearTint()
+            this.scene.tweens.timeline({
+                targets: this.linkSprite,
+                tweens:[
+                    { 
+                        displayOriginY: { value: maxHeight },
+                        duration: 100,
+                        delay: 0
+                    },
+                    { 
+                        displayOriginY: { value: originalHeight },
+                        duration: 100,
+                        delay: 0
+                    },
+                    { 
+                        displayOriginY: { value: bounceHeight },
+                        duration: 50,
+                        delay: 0
+                    },
+                    { 
+                        displayOriginY: { value: originalHeight },
+                        duration: 50,
+                        delay: 0
+                    },
+                ]
+            });
+        }
+        else {
+            this.linkSprite.clearTint()
 
-        //     if(this.frozenParticle) {
-        //         this.frozenParticle.destroy();
-        //     }
-        // }
+            if(this.frozenParticle) {
+                this.frozenParticle.destroy();
+            }
+        }
     }
 
     playBurned() {

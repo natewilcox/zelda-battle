@@ -211,6 +211,8 @@ export class ServerSimulationScene extends Phaser.Scene {
           player.x = player.playerState.x;
           player.y = player.playerState.y;
         }
+
+        console.log(`[${player.x}, ${player.y}]`)
       });
     });
     

@@ -59,8 +59,9 @@ export enum ServerEvents {
  */
 export default class ServerService {
 
+    room!: Room<IBattleRoyaleRoomState>;
+
     //private reference
-    private room!: Room<IBattleRoyaleRoomState>;
     private client!: Client;
     private events: Phaser.Events.EventEmitter;
 
@@ -322,6 +323,10 @@ export default class ServerService {
         
         this.room.send(ClientMessages.PING);
         this.events.once(ServerEvents.OnPong, cb, context);
+    }
+
+    getChangeCallbacks() {
+        return getStateCallbacks(this.room);
     }
 
     getSizeInBytes(obj) {

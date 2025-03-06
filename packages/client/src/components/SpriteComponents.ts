@@ -1,4 +1,3 @@
-import { Type } from '@gamestdio/timer';
 import { defineComponent, Types } from 'bitecs';
 
 export const Sprite = defineComponent({

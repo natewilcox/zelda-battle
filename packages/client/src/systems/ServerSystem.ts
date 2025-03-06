@@ -36,6 +36,8 @@ export const createServerSystem = (scene: GameScene, roomState: IBattleRoyaleRoo
     const serverSpriteEnterQuery = enterQuery(serverSpriteQuery);
     const serverSpriteExitQuery = exitQuery(serverSpriteQuery);
 
+    const $ = scene.serverService.getChangeCallbacks();
+
     const spriteGroup = scene.add.group({
         classType: Phaser.GameObjects.Sprite
     });
@@ -172,120 +174,140 @@ export const createServerSystem = (scene: GameScene, roomState: IBattleRoyaleRoo
         }
     }
 
-    const playerChangeHandler = (id: number, changes, state: IPlayerState) => {
+    const setPlayerChangeHandler = (state: IPlayerState) => {
 
-        const player = playerById.get(id);
+        const player = playerById.get(state.id);
         if(!player) return;
 
         let movedOnServer = false;
 
-        changes.forEach(change => {
 
-            if(change.field == 'hasOra') {
-                player.showOra(change.value);
-            }
-            else if(change.field == 'state') {
-                handleStateChange(player, state, change.value);
-            }
-            else if(change.field == 'x' || change.field == 'y') {
-                scene.physics.moveTo(player, state.x, state.y, player.speed);
-            }
-            else if(change.field == 'visible') {
-    
-                //if the health is changed to 0, die....
-                if(change.value) {
-                    player!.reappear();
-                }
-                else {
-                    player!.vanish(false);
-                }
-            }
-            else if(change.field == 'wearingCape') {
-                //if the health is changed to 0, die....
-                if(change.value) {
-                    player!.vanish(false);
-                }
-                else {
-                    player!.reappear();
-                }
-            }
-            else if(change.field == 'speed') {
-                player.speed = change.value;
-            }
-            else if(change.field == 'teleport_x' || change.field == 'teleport_y') {
-                movedOnServer = true;
-            }
-            else if(change.field == 'curLandType') {
-                player.setCurLandType(change.value);
-            }
-            else if(change.field == 'alpha') {
-                player.setAlpha(change.value);
-            }
-            else if(change.field == 'weaponSlot1') {
+        $(state).listen('hasOra', (value) => {
+            player.showOra(value);
+        });
 
-                //if last value was shield, remove shield
-                if(change.previousValue == GameTextures.BlueShield) {
-                    player.removeShield();
-                }
+        $(state).listen('state', (value) => {
+            handleStateChange(player, state, value);
+        });
 
-                if(change.value != undefined) {
-                    state.state = LinkState.Collecting;
+        $(state).listen('x', (value) => {
+            scene.physics.moveTo(player, state.x, state.y, player.speed);
+        });
 
-                    player.playCollectItem(change.value, undefined, () => {
-                    
-                        if(change.value == GameTextures.BlueShield) {
-                            
-                            let item = weaponFactory(change.value, player, scene);
-                            player.addShield(item);
-                        }
-                    });
-                }
+        $(state).listen('y', (value) => {
+            scene.physics.moveTo(player, state.x, state.y, player.speed);
+        });
+
+        $(state).listen('visible', (value) => {
+            
+            //if the health is changed to 0, die....
+            if(value) {
+                player!.reappear();
             }
-            else if(change.field == 'weaponSlot2') {
-
-                //if last value was shield, remove shield
-                if(change.previousValue == GameTextures.BlueShield) {
-                    player.removeShield();
-                }
-
-                if(change.value != undefined) {
-                    state.state = LinkState.Collecting;
-
-                    player.playCollectItem(change.value, undefined, () => {
-                    
-                        if(change.value == GameTextures.BlueShield) {
-                            
-                            let item = weaponFactory(change.value, player, scene);
-                            player.addShield(item);
-                        }
-                    });
-                }
-            }
-            else if(change.field == 'health') {
-                player.health = change.value;
-
-                //disable body when dead
-                if(player.health == 0) {
-                    scene.physics.world.disable(player);
-                }
-            }
-            else if(change.field == 'isHiding') {
-                if(change.value) {
-                    player.hide();
-                }
-                else {
-                    player.unHide();
-                }
-            }
-            else if(change.field == 'hasMagicShield') {
-                player.createMagicShield(change.value);
+            else {
+                player!.vanish(false);
             }
         });
 
-        //if the server moved me, then move to that location
-        if(movedOnServer) { 
+        $(state).listen('wearingCape', (value) => {
+            
+            //if the health is changed to 0, die....
+            if(value) {
+                player!.vanish(false);
+            }
+            else {
+                player!.reappear();
+            }
+        });
+
+        $(state).listen('speed', (value) => {
+            
+            //if the health is changed to 0, die....
+            player.speed = value;
+        });
+
+        $(state).listen('teleport_x', (value) => {
             player.setPosition(state.x, state.y);
-        }
+        });
+
+        $(state).listen('teleport_y', (value) => {
+            player.setPosition(state.x, state.y);
+        });
+
+        $(state).listen('curLandType', (value) => {
+            player.setCurLandType(value);
+        });
+        
+        $(state).listen('alpha', (value) => {
+            player.setAlpha(value);
+        });
+        
+        $(state).listen('weaponSlot1', (value, previous) => {
+
+            //if last value was shield, remove shield
+            if(previous == GameTextures.BlueShield) {
+                player.removeShield();
+            }
+
+            if(value != undefined) {
+                state.state = LinkState.Collecting;
+
+                player.playCollectItem(value, undefined, () => {
+                
+                    if(value == GameTextures.BlueShield) {
+                        
+                        let item = weaponFactory(value, player, scene);
+                        player.addShield(item);
+                    }
+                });
+            }
+        });
+        
+        $(state).listen('weaponSlot2', (value, previous) => {
+
+            //if last value was shield, remove shield
+            if(previous == GameTextures.BlueShield) {
+                player.removeShield();
+            }
+
+            if(value != undefined) {
+                state.state = LinkState.Collecting;
+
+                player.playCollectItem(value, undefined, () => {
+                
+                    if(value == GameTextures.BlueShield) {
+                        
+                        let item = weaponFactory(value, player, scene);
+                        player.addShield(item);
+                    }
+                });
+            }
+        });
+        
+        $(state).listen('health', (value, previous) => {
+
+            player.health = value;
+
+            //disable body when dead
+            if(player.health == 0) {
+                scene.physics.world.disable(player);
+            }
+        });
+        
+        $(state).listen('isHiding', (value, previous) => {
+
+            if(value) {
+                player.hide();
+            }
+            else {
+                player.unHide();
+            }
+        });
+        
+        $(state).listen('hasMagicShield', (value, previous) => {
+
+            player.createMagicShield(value);
+        });
     }
 
 
@@ -324,7 +346,8 @@ export const createServerSystem = (scene: GameScene, roomState: IBattleRoyaleRoo
             scene.componentService.addComponent(player, new ShowDamageComponent(scene));
 
             //listen for any changes on sprites.
-            playerState.onChange = (changes) => playerChangeHandler(id, changes, playerState);
+            //playerState.onChange = (changes) => playerChangeHandler(id, changes, playerState);
+            setPlayerChangeHandler(playerState);
 
             //add player to scene
             scene.players.add(player, true)

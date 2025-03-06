@@ -20,12 +20,12 @@ export class Chest extends Phaser.Physics.Arcade.Image {
         this.chestState = ChestState.Closed;
 
         //create hooks to listen for changes from server
-        state.onChange = () => {
+        // state.onChange = () => {
 
-            if(state.opened) {
-                this.open();
-            }
-        };
+        //     if(state.opened) {
+        //         this.open();
+        //     }
+        // };
 
         //add the chest to the chest group and scene
         scene.chests.add(this, true);

@@ -34,6 +34,7 @@ import { createDialogSystem, queueMessage } from '../systems/DialogSystem';
 import { IBattleRoyaleRoomState } from '@natewilcox/zelda-battle-shared';
 import { GameState } from '@natewilcox/zelda-battle-shared';
 import { createEnemySystem } from '../systems/EnemySystem';
+import { getStateCallbacks } from 'colyseus.js';
 
 
 /**
@@ -283,13 +284,14 @@ export default class GameScene extends Phaser.Scene {
         //add interactions between map and player
         this.addMapInteraction(player, roomState);
 
+        const $ = this.serverService.getChangeCallbacks();
         //create items based on room state
-        // roomState.itemStates.forEach(this.createItemHandler);
-        // roomState.itemStates.onAdd = this.createItemHandler;
-        // roomState.itemStates.onRemove = this.handleOnItemCollected;
+        roomState.itemStates.forEach(this.createItemHandler);
+        $(roomState).itemStates.onAdd(this.createItemHandler);
+        $(roomState).itemStates.onRemove(this.handleOnItemCollected);
 
-        // //when tiles are mutated
-        // roomState.mutatedTiles.onAdd = this.handleTileMutation;
+        // when tiles are mutated
+        $(roomState).mutatedTiles.onAdd(this.handleTileMutation);
 
         this.serverService.onTick((timer) => {
             SceneEvents.emit('ontick', timer)
@@ -313,47 +315,47 @@ export default class GameScene extends Phaser.Scene {
             debugDraw(groundLayer, this);
         }
 
-        // this.sparkEmitter = this.add.particles('flash').setDepth(40).createEmitter({
-        //     x: 100,
-        //     y: 100,
-        //     speed: { min: -500, max: 500 },
-        //     angle: { min: 0, max: 360 },
-        //     scale: { start: 1, end: 0 },
-        //     blendMode: 'MULTI',
-        //     active: true,
-        //     lifespan: 100,
-        //     frequency: -1
-        // });
+        this.sparkEmitter = this.add.particles('flash').setDepth(40).createEmitter({
+            x: 100,
+            y: 100,
+            speed: { min: -500, max: 500 },
+            angle: { min: 0, max: 360 },
+            scale: { start: 1, end: 0 },
+            blendMode: 'MULTI',
+            active: true,
+            lifespan: 100,
+            frequency: -1
+        });
 
-        // this.sparkleEmitter = this.add.particles('sparkle').setDepth(40).createEmitter({
-        //     x: 100,
-        //     y: 100,
-        //     speed: 200,
-        //     angle: { min: 0, max: 360 },
-        //     scale: { start: 2, end: 0 },
-        //     blendMode: 'ADD',
-        //     active: true,
-        //     lifespan: 200,
-        //     frequency: -1
-        // });
+        this.sparkleEmitter = this.add.particles('sparkle').setDepth(40).createEmitter({
+            x: 100,
+            y: 100,
+            speed: 200,
+            angle: { min: 0, max: 360 },
+            scale: { start: 2, end: 0 },
+            blendMode: 'ADD',
+            active: true,
+            lifespan: 200,
+            frequency: -1
+        });
 
-        // this.explosionEmitter = this.add.particles('smoke').setDepth(40).createEmitter({
-        //     x: 100,
-        //     y: 100,
-        //     emitZone: {
-        //         source: new Phaser.Geom.Circle(0, 0, 5),
-        //         type: 'random',
-        //         quantity: 10
-        //     },
-        //     speed: { min: 50, max: 500 },
-        //     angle: { min: 0, max: 360 },
-        //     scale: { start: 2, end: 0 },
-        //     alpha: 0.5,
-        //     blendMode: 'SCREEN',
-        //     active: true,
-        //     lifespan: 200,
-        //     frequency: -1
-        // });
+        this.explosionEmitter = this.add.particles('smoke').setDepth(40).createEmitter({
+            x: 100,
+            y: 100,
+            emitZone: {
+                source: new Phaser.Geom.Circle(0, 0, 5),
+                type: 'random',
+                quantity: 10
+            },
+            speed: { min: 50, max: 500 },
+            angle: { min: 0, max: 360 },
+            scale: { start: 2, end: 0 },
+            alpha: 0.5,
+            blendMode: 'SCREEN',
+            active: true,
+            lifespan: 200,
+            frequency: -1
+        });
 
         if(hasStorm == true) {
             this.initStorm(player, roomState);
@@ -610,7 +612,6 @@ export default class GameScene extends Phaser.Scene {
         const myState = roomState.playerStates.find(p => p.clientId == this.serverService.sessionId);
         if(!myState) return;
 
-        console.log(myState)
         //create player object
         const player = this.createPlayerObject(myState);
 
@@ -681,14 +682,15 @@ export default class GameScene extends Phaser.Scene {
             BadGuy.id[id] = enemy.id;
         });
 
-        // roomState.enemies.onRemove = enemy => {
-        //     const id = this.entityMap.get(enemy.id);
+        const $ = this.serverService.getChangeCallbacks();
+        $(roomState).enemies.onRemove(enemy => {
+            const id = this.entityMap.get(enemy.id);
 
-        //     if(id) {
-        //         removeEntity(this.world!, id);
-        //         this.entityMap.delete(id);
-        //     }
-        // };
+            if(id) {
+                removeEntity(this.world!, id);
+                this.entityMap.delete(id);
+            }
+        });
 
         //create remote player entities for existing and new players
         roomState.playerStates.forEach(createPlayerHandler);

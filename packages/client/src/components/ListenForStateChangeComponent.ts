@@ -34,8 +34,9 @@ export default class ListenForStateChangeComponent implements IComponent {
         this.playerState = playerState;
         this.serverService = serverService;
 
+
         //setup change handler to handle anything controlled by server
-        this.playerState.onChange = (changes) => this.playerChangeHandler(changes);
+        //this.playerState.onChange = (changes) => this.playerChangeHandler(changes);
         
         //handlers for server events.
         this.serverService.onHit(this.handleHit);
@@ -70,45 +71,47 @@ export default class ListenForStateChangeComponent implements IComponent {
             }
         });
 
-        this.fieldChangeHandlers.set('magic', (change) => {
-            this.link.magic = change.value;
+        const $ = this.serverService.getChangeCallbacks();
+
+        $(this.playerState).listen('magic', (value) => { if(!this.link) return;
+            this.link.magic = value;
                 
             //emit event to update hud
             SceneEvents.emit('onmagicchanged', this.link.magic / this.link.maxMagic);
         });
 
-        this.fieldChangeHandlers.set('rupees', (change) => {
-            this.link.rupees = change.value;
+        $(this.playerState).listen('rupees', (value) => { if(!this.link) return;
+            this.link.rupees = value;
                 
             //emit event to update hud
-            SceneEvents.emit('onrupeeschanged', change.value);
+            SceneEvents.emit('onrupeeschanged', value);
         });
 
-        this.fieldChangeHandlers.set('bombs', (change) => {
-            this.link.bombs = change.value;
+        $(this.playerState).listen('bombs', (value) => { if(!this.link) return;
+            this.link.bombs = value;
                 
             //emit event to update hud
-            SceneEvents.emit('onbombschanged', change.value);
+            SceneEvents.emit('onbombschanged', value);
         });
 
-        this.fieldChangeHandlers.set('arrows', (change) => {
-            this.link.arrows = change.value;
+        $(this.playerState).listen('arrows', (value) => { if(!this.link) return;
+            this.link.arrows = value;
                 
             //emit event to update hud
-            SceneEvents.emit('onarrowschanged', change.value);
+            SceneEvents.emit('onarrowschanged', value);
         });
 
-        this.fieldChangeHandlers.set('keys', (change) => {
-            this.link.keys = change.value;
+        $(this.playerState).listen('keys', (value) => { if(!this.link) return;
+            this.link.keys = value;
                 
             //emit event to update hud
-            SceneEvents.emit('onkeyschanged', change.value);
+            SceneEvents.emit('onkeyschanged', value);
         });
 
-        this.fieldChangeHandlers.set('visible', (change) => {
+        $(this.playerState).listen('visible', (value) => { if(!this.link) return;
          
             //if the health is changed to 0, die....
-            if(change.value) {
+            if(value) {
                 this.link!.reappear();
             }
             else {
@@ -116,9 +119,9 @@ export default class ListenForStateChangeComponent implements IComponent {
             }
         });
 
-        this.fieldChangeHandlers.set('wearingCape', (change) => {
+        $(this.playerState).listen('wearingCape', (value) => { if(!this.link) return;
             //if the health is changed to 0, die....
-            if(change.value) {
+            if(value) {
                 this.link!.vanish(true);
             }
             else {
@@ -126,40 +129,40 @@ export default class ListenForStateChangeComponent implements IComponent {
             }
         });
 
-        this.fieldChangeHandlers.set('hasMagicShield', (change) => {
-            this.link.createMagicShield(change.value);
+        $(this.playerState).listen('hasMagicShield', (value) => { if(!this.link) return;
+            this.link.createMagicShield(value);
         });
 
-        this.fieldChangeHandlers.set('hasShadow', (change) => {
-            this.link.showShadow(change.value);
+        $(this.playerState).listen('hasShadow', (value) => { if(!this.link) return;
+            this.link.showShadow(value);
         });
 
-        this.fieldChangeHandlers.set('hasOra', (change) => {
-            this.link.showOra(change.value);
+        $(this.playerState).listen('hasOra', (value) => { if(!this.link) return;
+            this.link.showOra(value);
         });
 
 
-        this.fieldChangeHandlers.set('hasControl', (change) => {
-            this.link.hasControl = change.value;
+        $(this.playerState).listen('hasControl', (value) => { if(!this.link) return;
+            this.link.hasControl = value;
         });
 
-        this.fieldChangeHandlers.set('alpha', (change) => {
-            this.link.setAlpha(change.value);
+        $(this.playerState).listen('alpha', (value) => { if(!this.link) return;
+            this.link.setAlpha(value);
         });
 
-        this.fieldChangeHandlers.set('maxHealth', (change) => {
-            SceneEvents.emit('onmaxhealthchanged', change.value);
+        $(this.playerState).listen('maxHealth', (value) => { if(!this.link) return;
+            SceneEvents.emit('onmaxhealthchanged', value);
         });
 
-        this.fieldChangeHandlers.set('weaponSlot1', (change) => {
-            this.link.collectItem(change.value, 1);
+        $(this.playerState).listen('weaponSlot1', (value) => { if(!this.link) return;
+            this.link.collectItem(value, 1);
         });
 
-        this.fieldChangeHandlers.set('weaponSlot2', (change) => {
-            this.link.collectItem(change.value, 2);
+        $(this.playerState).listen('weaponSlot2', (value) => { if(!this.link) return;
+            this.link.collectItem(value, 2);
         });
 
-        this.fieldChangeHandlers.set('teleport_x', (change) => {
+        $(this.playerState).listen('teleport_x', (value) => { if(!this.link) return;
             this.link.setPosition(this.playerState.x, this.playerState.y);
             this.link.sleep();
 
@@ -169,7 +172,7 @@ export default class ListenForStateChangeComponent implements IComponent {
             updateHouseRoof(this.link.scene, firstTile, coverLayer, true);
         });
 
-        this.fieldChangeHandlers.set('teleport_y', (change) => {
+        $(this.playerState).listen('teleport_y', (value) => { if(!this.link) return;
             this.link.setPosition(this.playerState.x, this.playerState.y);
             this.link.sleep();
 
@@ -179,15 +182,15 @@ export default class ListenForStateChangeComponent implements IComponent {
             updateHouseRoof(this.link.scene, firstTile, coverLayer, true);
         });
 
-        this.fieldChangeHandlers.set('state', (change) => {
+        $(this.playerState).listen('state', (value, previous) => {
             
-            if(change.value == LinkState.Hurt) {
+            if(value == LinkState.Hurt) {
                 this.link.takeDamage(0, 0);
             }
-            if(change.previousValue == LinkState.Hurt) {
+            if(previous == LinkState.Hurt) {
                 this.link.reset()
             }
-            if(change.value == LinkState.Dead) {
+            if(value == LinkState.Dead) {
                 this.link.scene.playEffect(this.link.x, this.link.y, 'effects', 'death-poof');
             }
         });

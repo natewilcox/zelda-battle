@@ -18,6 +18,7 @@ export const createEnemySystem = (scene: GameScene, roomState: IBattleRoyaleRoom
     const enemyMovementState = new Map<number, boolean>();
 
     const changeHandlers: Map<string, (sprite: any, changes: any) => void> = new Map();
+    const $ = scene.serverService.getChangeCallbacks();
 
     const serverSpriteQuery = defineQuery([BadGuy]);
     const serverSpriteEnterQuery = enterQuery(serverSpriteQuery);
@@ -29,16 +30,18 @@ export const createEnemySystem = (scene: GameScene, roomState: IBattleRoyaleRoom
         classType: Enemy
     });
 
-    const changeHandler = function(this: IEnemyState, changes) {
+    const setChangeHandler = function(state: IEnemyState) {
 
-        //call the change handler for each change coming from server
-        changes.forEach(change => {
+        $(state).listen('state', (value, previous) => {
 
-            const field = texturesIndex[this.texture] + '_' + change.field;
+            const field = texturesIndex[state.texture] + '_state';
+            changeHandlers.get(field)!(state, value);
+        });
 
-            if(changeHandlers.get(field)) {
-                changeHandlers.get(field)!(this, change);
-            }
+        $(state).listen('alpha', (value, previous) => {
+
+            const field = texturesIndex[state.texture] + '_alpha';
+            changeHandlers.get(field)!(state, value);
         });
     };
 
@@ -218,7 +221,7 @@ export const createEnemySystem = (scene: GameScene, roomState: IBattleRoyaleRoom
             if(enemyState) {
 
                 //listen for changes
-                enemyState.onChange = changeHandler;
+                setChangeHandler(enemyState);
                 const enemy = enemyFactory(scene, enemyState);
 
                 //store the state by id for fetching later

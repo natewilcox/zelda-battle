@@ -4,11 +4,11 @@ import { texturesIndex } from "@natewilcox/zelda-battle-shared";
 import NPCharacter from "../characters/NPC";
 import { NPC } from "../components/SpriteComponents";
 import GameScene from "../scenes/GameScene";
-import { NPCAICommand } from "~/commands/NPCAICommand";
 
 export const createNPCSystem = (scene: GameScene, roomState: IBattleRoyaleRoomState) => {
 
     const changeHandlers: Map<string, (sprite: any, changes: any) => void> = new Map();
+    const $ = scene.serverService.getChangeCallbacks();
 
     const serverSpriteQuery = defineQuery([NPC]);
     const serverSpriteEnterQuery = enterQuery(serverSpriteQuery);
@@ -59,8 +59,17 @@ export const createNPCSystem = (scene: GameScene, roomState: IBattleRoyaleRoomSt
 
             if(npc) {
 
+                $(npc).listen('anim', (value) => {
+                    const anim = `${texturesIndex[npc.texture]}-${value}`;
+                    const sprite = spriteMap.get(npc.id);
+                    
+                    if(sprite) {
+                        sprite.anims.play(anim, true);
+                    }
+                });
+
                 //listen for changes
-                npc.onChange = changeHandler;
+                //npc.onChange = changeHandler;
                 const anim = `${texturesIndex[npc.texture]}-standing`;
                 const npcharacter = scene.npcs.get(npc.x, npc.y, 'npc');
                 

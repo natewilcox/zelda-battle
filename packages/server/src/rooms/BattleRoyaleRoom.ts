@@ -95,22 +95,56 @@ export class BattleRoyaleRoom extends Room<BattleRoyaleRoomState> {
 
     //fetch drop rates from database
     this.itemDropRate = [
-      [GameTextures.RedRupee, 1],
-      [GameTextures.BlueRupee, 5],
       [GameTextures.GreenRupee, 10],
-      [GameTextures.OneArrow, 10],
-      [GameTextures.OneBomb, 5],
-      [GameTextures.SmallHeart, 10],
+      [GameTextures.BlueRupee, 5],
       [GameTextures.MagicBottle, 5],
-      [GameTextures.MagicJar, 1]
+      [GameTextures.MagicJar, 5],
+      [GameTextures.OneArrow, 10],
+      [GameTextures.TenArrows, 20],
+      [GameTextures.OneBomb, 5],
+      [GameTextures.TenBombs, 20],
+      [GameTextures.RedRupee, 5],
+      [GameTextures.SmallHeart, 10],
+      [GameTextures.FiftyRupees, 1],
+      [GameTextures.FullHeart, 5]
     ];
 
     this.weaponDropRate = [
-      [GameTextures.Sword1, 100]
+      [GameTextures.BluePotion, 10],
+      [GameTextures.BlueShield, 15],
+      [GameTextures.BlueStaff, 20],
+      [GameTextures.Bow, 20],
+      [GameTextures.Bow3Arrow, 10],
+      [GameTextures.Bow5Arrow, 5],
+      [GameTextures.Cape, 10],
+      [GameTextures.FireRod, 10],
+      [GameTextures.GreenPotion, 10],
+      [GameTextures.Hammer, 10],
+      [GameTextures.IceRod, 10],
+      [GameTextures.LightRod, 10],
+      [GameTextures.MagicBow, 15],
+      [GameTextures.MagicBow3Arrow, 5],
+      [GameTextures.MagicBow5Arrow, 1],
+      [GameTextures.RedPotion, 3],
+      [GameTextures.Staff, 10],
+      [GameTextures.Sword1, 200],
+      [GameTextures.Sword2, 15],
+      [GameTextures.Sword3, 10],
+      [GameTextures.Sword4, 5],
+      [GameTextures.Staff, 10],
+      [GameTextures.YellowStaff, 10],
     ]
 
     this.floorDropRate = [
-      [GameTextures.GreenRupee, 100]
+      [GameTextures.GreenRupee, 10],
+      [GameTextures.BlueRupee, 5],
+      [GameTextures.MagicBottle, 5],
+      [GameTextures.MagicJar, 5],
+      [GameTextures.OneArrow, 10],
+      [GameTextures.OneBomb, 5],
+      [GameTextures.RedRupee, 5],
+      [GameTextures.SmallHeart, 10],
+      [GameTextures.Nothing, 75]
     ]
 
     //dynamically load and cache map input game input map

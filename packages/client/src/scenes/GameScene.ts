@@ -272,7 +272,7 @@ export default class GameScene extends Phaser.Scene {
         
         //create layers in map
         const groundLayer = this.map.createLayer("Ground Layer", this.tilesetNames);
-        groundLayer!.setDepth(1);
+        groundLayer!.setDepth(0);
         groundLayer!.setCollisionByProperty({ 
             collides: true,
         });

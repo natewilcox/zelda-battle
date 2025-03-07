@@ -243,45 +243,30 @@ export default class ServerService {
                 this.events.emit(ServerEvents.OnTick, cur);
             });
 
-            //handle state changes that do not have a specific handler
-            // $(this.room.state).onChange((changes) => {
+            $(this.room.state).listen('gameState', (cur, prev) => {
+                this.events.emit(ServerEvents.OnGameStateChanged, this.room.state, cur);
+            });
 
-            //     let zoneChanged = false;
+            function debounce(func, delay) {
+                let timeout;
+                return (...args) => {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func(...args), delay);
+                };
+            }
 
-            //     changes.forEach(change => {
+            // Debounced function to emit the event
+            const emitZoneChanged = debounce(() => {
+                this.events.emit(ServerEvents.OnZoneChanged, {
+                    width: this.room.state.zoneWidth,
+                    x: this.room.state.zoneX,
+                    y: this.room.state.zoneY
+                });
+            }, 0);
 
-            //         switch(change.field) {
-
-            //             //case when server game state changes.
-            //             case 'gameState':
-            //                 this.events.emit(ServerEvents.OnGameStateChanged, this.room.state, change.value);
-            //                 break;
-
-            //             case "timer": 
-            //                 this.events.emit(ServerEvents.OnTick, change.value);
-            //                 break;
-                        
-
-            //             case "zoneWidth" :
-            //             case "zoneX" :
-            //             case "zoneY" :
-
-            //                 //make sure we only process this change once
-            //                 if(!zoneChanged) {
-
-            //                     zoneChanged = true;
-            //                     this.events.emit(ServerEvents.OnZoneChanged, {
-            //                         width: this.room.state.zoneWidth,
-            //                         x: this.room.state.zoneX,
-            //                         y: this.room.state.zoneY
-            //                     });
-            //                 }
-                            
-            //                 break;
-            //         }
-
-            //     });
-            // });
+            $(this.room.state).listen('zoneWidth', (cur, prev) => emitZoneChanged());
+            $(this.room.state).listen('zoneX', (cur, prev) => emitZoneChanged());
+            $(this.room.state).listen('zoneY', (cur, prev) => emitZoneChanged());
         }
         catch(ex) {
             console.error(`unable to join room '${room_name}'`, ex);

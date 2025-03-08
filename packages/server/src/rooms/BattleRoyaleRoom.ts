@@ -465,6 +465,13 @@ export class BattleRoyaleRoom extends Room<BattleRoyaleRoomState> {
   onDispose() {
     SimulationEvents.removeAllListeners();
     console.log("room", this.roomId, "disposing...");
+
+    window.cancelAnimationFrame = () => {
+      console.log('cancel next frame')
+    }
+
+    this.simulation.scene.destroy();
+    this.simulation.destroy(false);
   }
 
   emit(eventName: string, args: any) {

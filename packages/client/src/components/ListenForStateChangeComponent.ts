@@ -58,7 +58,7 @@ export default class ListenForStateChangeComponent implements IComponent {
         $(this.playerState).listen('health', (value) => { if(!this.link) return;
             //emit event to update hud
             SceneEvents.emit('onhealthchanged', value);
-    
+
             //if the health is changed to 0, die....
             if(value <= 0) {
                 this.link!.die()
@@ -175,15 +175,20 @@ export default class ListenForStateChangeComponent implements IComponent {
         });
 
         $(this.playerState).listen('state', (value, previous) => {
-            
+          
+            //ignore all state changes for dead players.
+            if(this.link?.stateMachine.currentState.name == "dead") {
+                return
+            }
+
             if(value == LinkState.Hurt) {
                 this.link.takeDamage(0, 0);
             }
-            if(previous == LinkState.Hurt) {
-                this.link.reset()
-            }
-            if(value == LinkState.Dead) {
+            else if(value == LinkState.Dead) {
                 this.link.scene.playEffect(this.link.x, this.link.y, 'effects', 'death-poof');
+            }
+            else if(previous == LinkState.Hurt) {
+                this.link.reset()
             }
         });
     }

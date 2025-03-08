@@ -30,44 +30,6 @@ const itemDropRate = [
     [GameTextures.MagicJar, 1]
 ];
 
-const one_cords = [
-    {dx: 0, dy: 15}
-]
-
-const two_cords = [
-    {dx: -10, dy: 10},
-    {dx: 10, dy: 10},
-]
-
-const three_cords = [
-    {dx: -10, dy: 10},
-    {dx: 0, dy: 15},
-    {dx: 10, dy: 10},
-]
-
-const four_Cords = [
-    {dx: -13, dy: 0},
-    {dx: -7, dy: 10},
-    {dx: 7, dy: 10},
-    {dx: 13, dy: 0},
-]
-
-const five_cords = [
-    {dx: -15, dy: 0},
-    {dx: -10, dy: 10},
-    {dx: 0, dy: 15},
-    {dx: 10, dy: 10},
-    {dx: 15, dy: 0},
-]
-
-const cords = [
-    one_cords,
-    two_cords,
-    three_cords,
-    four_Cords,
-    five_cords
-];
-
 /**
  * Server Command to try and attack a target
  * Does nothing when the game hasnt started yet.

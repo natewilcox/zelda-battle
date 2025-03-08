@@ -852,7 +852,7 @@ export class Link extends Character {
     }
 
     playFrozen(freeze: boolean) {
-        console.warn("not implemented")
+       
         if(freeze) {
 
             this.scene.playSparkleFlash(this.x, this.y);

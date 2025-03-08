@@ -7,6 +7,7 @@ import { Direction, GameTextures } from "@natewilcox/zelda-battle-shared";
 import { RemoteBomb } from "../weapons/Bomb";
 import { IBattleRoyaleRoomState } from "@natewilcox/zelda-battle-shared";
 import { GameState } from "@natewilcox/zelda-battle-shared";
+import { debounce } from "../utils/Utils";
 
 /**
  * enum for events that take place on server
@@ -246,15 +247,7 @@ export default class ServerService {
             $(this.room.state).listen('gameState', (cur, prev) => {
                 this.events.emit(ServerEvents.OnGameStateChanged, this.room.state, cur);
             });
-
-            function debounce(func, delay) {
-                let timeout;
-                return (...args) => {
-                    clearTimeout(timeout);
-                    timeout = setTimeout(() => func(...args), delay);
-                };
-            }
-
+            
             // Debounced function to emit the event
             const emitZoneChanged = debounce(() => {
                 this.events.emit(ServerEvents.OnZoneChanged, {

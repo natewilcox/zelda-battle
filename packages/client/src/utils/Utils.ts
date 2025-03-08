@@ -565,3 +565,11 @@ export const collectObjectTiles = (rootTile: Phaser.Tilemaps.Tile, layer: Phaser
 
 	return tiles;
 }
+
+export function debounce(func, delay) {
+	let timeout;
+	return (...args) => {
+		clearTimeout(timeout);
+		timeout = setTimeout(() => func(...args), delay);
+	};
+}

@@ -192,7 +192,7 @@ export class ServerSimulationScene extends Phaser.Scene {
 
     SimulationEvents.on('onplayerhurt', (event: any) => {
       const player = this.players.getChildren().find(p => (p as Player).id == event.id) as Player;
-
+     
       if(player) {
 
         const fromPoint = new Phaser.Math.Vector2(event.x, event.y);
@@ -212,7 +212,7 @@ export class ServerSimulationScene extends Phaser.Scene {
           player.y = player.playerState.y;
         }
 
-        console.log(`[${player.x}, ${player.y}]`)
+        //console.log(`[${player.x}, ${player.y}]`)
       });
     });
     

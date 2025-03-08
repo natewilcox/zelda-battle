@@ -81,6 +81,8 @@ export class StartGameCommand extends Command<BattleRoyaleRoom, Payload> {
         
         //in 5 seconds, have wizard warp players
         this.clock.setTimeout(this.startGameHandler, 5000);
+
+        this.room.state.playerStates.forEach(player => this.room.emit('onplayeradded', player));
     }
 
 

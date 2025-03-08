@@ -26,7 +26,7 @@ export class Sword1 implements IWeapon {
         
         const dir = anim!.key.split("-")[2];
         this.scene.serverService.trySwordAttack(this.textId, directionLookupMap.get(dir)!);
-        //swordAttack(this.textId, directionLookupMap.get(dir)!, this.holder, 1, this.scene as GameScene);
+        swordAttack(this.textId, directionLookupMap.get(dir)!, this.holder, 1, this.scene as GameScene);
     }
 }
 
@@ -119,7 +119,7 @@ const positionHitScan = (x: number, y: number, w: number, h: number, hitbox: Pha
 }
 
 const swordAttack = (texture: GameTextures, dir: Direction, attacker: Character, hitboxMulti: number, scene: GameScene) => {
-
+    
     const hitbox = scene.add.rectangle(-100, -100, 5, 10).setStrokeStyle(1, 0x000000);
 
     switch(dir) {
@@ -171,6 +171,7 @@ const swordAttack = (texture: GameTextures, dir: Direction, attacker: Character,
     const breakableTile = scanAdjacentTiles(attacker.x, attacker.y, groundLayer, dir);
    
     if(breakableTile && canWeaponBreakTile(texture, breakableTile.properties.texture)) {
+    
         scene.serverService.tryBreakTile(breakableTile.properties.texture, texture, breakableTile.x, breakableTile.y);
     }
 }

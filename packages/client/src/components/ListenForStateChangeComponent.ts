@@ -22,8 +22,6 @@ export default class ListenForStateChangeComponent implements IComponent {
     private playerState: IPlayerState;
     private serverService: ServerService;
 
-    private fieldChangeHandlers!: Map<string, (any) => void>;
-
     /**
      * Creates componemt that will listen for changes on the server
      * 
@@ -33,10 +31,6 @@ export default class ListenForStateChangeComponent implements IComponent {
 
         this.playerState = playerState;
         this.serverService = serverService;
-
-
-        //setup change handler to handle anything controlled by server
-        //this.playerState.onChange = (changes) => this.playerChangeHandler(changes);
         
         //handlers for server events.
         this.serverService.onHit(this.handleHit);
@@ -59,19 +53,17 @@ export default class ListenForStateChangeComponent implements IComponent {
         this.serverService.onBagContentsChanged(this.handleBagContentsChanged);
         this.serverService.onLockedDoorOpened(this.handleLockedDoorOpened);
 
-        //handlers for changes that stream from server
-        this.fieldChangeHandlers = new Map();
-        this.fieldChangeHandlers.set('health', (change) => {
+        const $ = this.serverService.getChangeCallbacks();
+
+        $(this.playerState).listen('health', (value) => { if(!this.link) return;
             //emit event to update hud
-            SceneEvents.emit('onhealthchanged', change.value);
+            SceneEvents.emit('onhealthchanged', value);
     
             //if the health is changed to 0, die....
-            if(change.value <= 0) {
+            if(value <= 0) {
                 this.link!.die()
             }
         });
-
-        const $ = this.serverService.getChangeCallbacks();
 
         $(this.playerState).listen('magic', (value) => { if(!this.link) return;
             this.link.magic = value;
@@ -221,22 +213,6 @@ export default class ListenForStateChangeComponent implements IComponent {
             // }
         }
     }
-
-    /**
-     * Handles events that are happening on the server for player.
-     * 
-     * @param change 
-     */
-    private playerChangeHandler = (changes) => {
-        
-        changes.forEach(change => {
-
-            //call the change handler for each change coming from server
-            if(this.fieldChangeHandlers.get(change.field)) {
-                this.fieldChangeHandlers.get(change.field)!(change);
-            }
-        });
-    };
 
 
     /**

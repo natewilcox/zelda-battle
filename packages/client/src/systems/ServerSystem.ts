@@ -6,7 +6,7 @@ import { Direction, directionIndex, GameTextures, linkColorIndex, LinkState, Wea
 import { IPlayerState } from '@natewilcox/zelda-battle-shared';
 import { Link } from '../characters/Link';
 import GameScene from '../scenes/GameScene';
-import { getWeaponType, weaponFactory } from '../utils/Utils';
+import { debounce, getWeaponType, weaponFactory } from '../utils/Utils';
 import { IBow } from '../weapons/IBow';
 import { Bullet } from '../weapons/Bullet';
 import ShowDamageComponent from '../components/ShowDamageComponent';
@@ -174,9 +174,9 @@ export const createServerSystem = (scene: GameScene, roomState: IBattleRoyaleRoo
         }
     }
 
-    const setPlayerChangeHandler = (state: IPlayerState) => {
+    const setPlayerChangeHandler = (state: IPlayerState, id: number) => {
 
-        const player = playerById.get(state.id);
+        const player = playerById.get(id);
         if(!player) return;
 
         let movedOnServer = false;
@@ -190,13 +190,12 @@ export const createServerSystem = (scene: GameScene, roomState: IBattleRoyaleRoo
             handleStateChange(player, state, value);
         });
 
-        $(state).listen('x', (value) => {
+        const emitZoneChanged = debounce(() => {
             scene.physics.moveTo(player, state.x, state.y, player.speed);
-        });
+        }, 0);
 
-        $(state).listen('y', (value) => {
-            scene.physics.moveTo(player, state.x, state.y, player.speed);
-        });
+        $(state).listen('x', (value) => emitZoneChanged());
+        $(state).listen('y', (value) => emitZoneChanged());
 
         $(state).listen('visible', (value) => {
             
@@ -347,7 +346,6 @@ export const createServerSystem = (scene: GameScene, roomState: IBattleRoyaleRoo
 
             //listen for any changes on sprites.
             //playerState.onChange = (changes) => playerChangeHandler(id, changes, playerState);
-            setPlayerChangeHandler(playerState);
 
             //add player to scene
             scene.players.add(player, true)
@@ -355,11 +353,14 @@ export const createServerSystem = (scene: GameScene, roomState: IBattleRoyaleRoo
             //store the state by id for fetching later
             playerStatesById.set(id, playerState);
             playerById.set(id, player);
+
             playerByServerId.set(player.id, player);
             playerStateByServerId.set(player.id, playerState);
 
             //add a poof effect where the player appears
             scene.playEffect(playerState.x, playerState.y, 'effects', 'poof');
+
+            setPlayerChangeHandler(playerState, id);
         }
 
 

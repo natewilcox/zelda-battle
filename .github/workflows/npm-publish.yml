@@ -11,14 +11,17 @@ jobs:
         with:
           node-version: 20
       - run: |
+          cd packages/zelda-battle-shared
           npm ci
-          npm ci --workspace=@natewilcox/zelda-battle-shared
+          npm run build
+          # npm ci
+          # npm ci --workspace=@natewilcox/zelda-battle-shared
           # npm ci --workspace=@natewilcox/zelda-battle-client
-          npm ci --workspace=@natewilcox/zelda-battle-server
+          # npm ci --workspace=@natewilcox/zelda-battle-server
 
-          npm run build --workspace=@natewilcox/zelda-battle-shared
+          # npm run build --workspace=@natewilcox/zelda-battle-shared
           # npm run build --workspace=@natewilcox/zelda-battle-client
-          npm run build --workspace=@natewilcox/zelda-battle-server
+          # npm run build --workspace=@natewilcox/zelda-battle-server
 
       - name: Archive build artifacts
         uses: actions/upload-artifact@v4
@@ -27,27 +30,27 @@ jobs:
           path: |
             packages/zelda-battle-shared/dist
             # packages/zelda-battle-client/dist
-            packages/zelda-battle-server/build
+            # packages/zelda-battle-server/build
           retention-days: 7  # Optional: Store artifacts for 7 days
           
-  publish:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          registry-url: 'https://registry.npmjs.org/'
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: build-artifacts
+  # publish:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   if: github.ref == 'refs/heads/main'
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 20
+  #         registry-url: 'https://registry.npmjs.org/'
+  #     - name: Download build artifacts
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: build-artifacts
 
-      - run: npm publish --workspace=@natewilcox/zelda-battle-server --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  #     - run: npm publish --workspace=@natewilcox/zelda-battle-server --access public
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 # jobs:
 #   npm-build:

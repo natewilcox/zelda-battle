@@ -4,7 +4,8 @@
   "description": "client app for zelda battle",
   "type": "module",
   "scripts": {
-    "start": "vite"
+    "start": "vite",
+    "build": "vite build"
   },
   "author": "Nathan Wilcox",
   "license": "ISC",

@@ -25,7 +25,12 @@ jobs:
             packages/zelda-battle-client/dist
             packages/zelda-battle-server/build
           retention-days: 7  # Optional: Store artifacts for 7 days
+          
+      - name: Publish to NPM
 
+        run: npm publish --workspace=@natewilcox/zelda-battle-server --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 # jobs:
 #   npm-build:

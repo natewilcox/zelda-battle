@@ -13,11 +13,11 @@ jobs:
       - run: |
           npm ci
           npm ci --workspace=@natewilcox/zelda-battle-shared
-          npm ci --workspace=@natewilcox/zelda-battle-client
+          # npm ci --workspace=@natewilcox/zelda-battle-client
           npm ci --workspace=@natewilcox/zelda-battle-server
 
           npm run build --workspace=@natewilcox/zelda-battle-shared
-          npm run build --workspace=@natewilcox/zelda-battle-client
+          # npm run build --workspace=@natewilcox/zelda-battle-client
           npm run build --workspace=@natewilcox/zelda-battle-server
 
       - name: Archive build artifacts
@@ -26,7 +26,7 @@ jobs:
           name: build-artifacts
           path: |
             packages/zelda-battle-shared/dist
-            packages/zelda-battle-client/dist
+            # packages/zelda-battle-client/dist
             packages/zelda-battle-server/build
           retention-days: 7  # Optional: Store artifacts for 7 days
           

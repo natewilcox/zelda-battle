@@ -16,6 +16,15 @@ jobs:
           npm run --build --workspace=@natewilcox/zelda-battle-client
           npm run --build --workspace=@natewilcox/zelda-battle-server
 
+      - name: Archive build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: |
+            packages/zelda-battle-shared/dist
+            packages/zelda-battle-client/dist
+            packages/zelda-battle-server/build
+
 
 # jobs:
 #   npm-build:

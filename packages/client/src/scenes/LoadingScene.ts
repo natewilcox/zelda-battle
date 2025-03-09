@@ -107,33 +107,33 @@ export default class LoadingScene extends Phaser.Scene {
     /**
      * Handles when loading state has changed in game.
      */
-    private handleLoadingStateChange(newState: LoadingState) {
+    // private handleLoadingStateChange(newState: LoadingState) {
      
-        switch(newState) {
+    //     switch(newState) {
 
-            case LoadingState.Authenticating: 
-                this.loadingStatus.setText('Loading User Data');
-                break;
+    //         case LoadingState.Authenticating: 
+    //             this.loadingStatus.setText('Loading User Data');
+    //             break;
 
-            case LoadingState.LoadingResources: 
-                this.loadingStatus.setText('Loading Resources');
-                break;
+    //         case LoadingState.LoadingResources: 
+    //             this.loadingStatus.setText('Loading Resources');
+    //             break;
 
-            case LoadingState.LoadingResources: 
-                this.loadingStatus.setText('Loading Resources');
-                break;
+    //         case LoadingState.LoadingResources: 
+    //             this.loadingStatus.setText('Loading Resources');
+    //             break;
 
-            case LoadingState.SearchingMatch: 
-                this.loadingStatus.setText('Searching for match');
-                break;
+    //         case LoadingState.SearchingMatch: 
+    //             this.loadingStatus.setText('Searching for match');
+    //             break;
             
-            case LoadingState.JoiningRoom: 
-                this.loadingStatus.setText('Joining server');
-                break;
+    //         case LoadingState.JoiningRoom: 
+    //             this.loadingStatus.setText('Joining server');
+    //             break;
             
-            case LoadingState.Done: 
-                this.loadingStatus.setText('Get Ready!');
-                break;
-        }
-    }
+    //         case LoadingState.Done: 
+    //             this.loadingStatus.setText('Get Ready!');
+    //             break;
+    //     }
+    // }
 }

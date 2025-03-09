@@ -40,7 +40,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-artifacts
-          path: packages/
+          path: packages/zelda-battle-server/build
 
       - run: npm publish --workspace=@natewilcox/zelda-battle-server --access public
         env:

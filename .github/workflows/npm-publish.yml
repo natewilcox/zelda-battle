@@ -11,7 +11,10 @@ jobs:
         with:
           node-version: 20
       - run: |
-          npm ci
+          npm ci --workspace=@natewilcox/zelda-battle-shared
+          npm ci --workspace=@natewilcox/zelda-battle-client
+          npm ci --workspace=@natewilcox/zelda-battle-server
+
           npm run build --workspace=@natewilcox/zelda-battle-shared
           npm run build --workspace=@natewilcox/zelda-battle-client
           npm run build --workspace=@natewilcox/zelda-battle-server

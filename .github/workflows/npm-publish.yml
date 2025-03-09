@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: 20
       - run: |
-          cd packages/zelda-battle-shared
+          cd packages/shared
           npm ci
           npm run build
           # npm ci

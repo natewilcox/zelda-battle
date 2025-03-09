@@ -3,7 +3,6 @@
   "version": "1.0.1",
   "description": "client app for zelda battle",
   "type": "module",
-  "main": "src/main.ts",
   "scripts": {
     "start": "vite",
     "build": "vite build"

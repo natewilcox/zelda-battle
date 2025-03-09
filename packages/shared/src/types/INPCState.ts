@@ -1,4 +1,3 @@
-import type { Dispatcher } from "@colyseus/command";
 import { Schema } from "@colyseus/schema";
 import { GameTextures } from "./Animations";
 import { IPlayerState } from "./IPlayerState";

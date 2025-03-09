@@ -1,6 +1,6 @@
 {
   "name": "@natewilcox/zelda-battle-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "client app for zelda battle",
   "type": "module",
   "scripts": {

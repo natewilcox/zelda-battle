@@ -36,7 +36,12 @@ jobs:
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org/'
-      - run: npm ci
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifacts
+          path: packages/
+
       - run: npm publish --workspace=@natewilcox/zelda-battle-server --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

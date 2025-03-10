@@ -57,18 +57,20 @@ jobs:
           name: 'build-artifacts-server'
           path: packages/server/build/
       - run: |
-          ls packages/server/build/ -ltr
-      #     # npm publish --access public
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      # - name: Patch version
-      #   # if: github.event_name == 'release'
-      #   run: |
-      #     git config --local user.email "natewilcox@gmail.com"
-      #     git config --local user.name "GitHub Action"
+          pwd
+          cd packages/server
+          npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Patch version
+        # if: github.event_name == 'release'
+        run: |
+          pwd
+          git config --local user.email "natewilcox@gmail.com"
+          git config --local user.name "GitHub Action"
 
-      #     npm version patch --workspace=@natewilcox/zelda-battle-server -m "Automated version bump [skip ci]"
-      #     git push
+          npm version patch --workspace=@natewilcox/zelda-battle-server -m "Automated version bump [skip ci]"
+          git push
 
   # deploy:
   #   needs: build

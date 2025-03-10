@@ -20,7 +20,7 @@ jobs:
       - name: Archive build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifacts
+          name: 'build-artifacts'
           path: |
             packages/shared/dist
             packages/client/dist
@@ -40,7 +40,7 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
-          name: build-artifacts
+          name: 'build-artifacts'
           path: ./packages/server/build
       - run: |
           ls packages/server
@@ -56,19 +56,26 @@ jobs:
           npm version patch --workspace=@natewilcox/zelda-battle-server -m "Automated version bump [skip ci]"
           git push
 
-# jobs:
-#   npm-build:
-#     uses: natewilcox/actions-workflows/.github/workflows/npm-publish.yml@main
-#     secrets:
-#       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  deploy:
+    runs-on: ubuntu-latest
 
-#   aws-publish:
-#     needs: npm-build
-#     uses: natewilcox/actions-workflows/.github/workflows/aws-s3-publish.yml@main
-#     secrets:
-#       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#       CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-#     with:
-#       AWS_REGION: 'us-east-2'
-#       S3_BUCKET_NAME: 'zelda.natewilcox.io'
+    steps:
+    - name: Download build artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: 'build-artifacts'
+
+    - name: Set up AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ inputs.AWS_REGION }}
+
+    - name: Copy files to the S3 bucket
+      run: |
+        aws s3 sync ./packages/client/ s3://zelda.battle.natewilcox.io --acl=private --delete
+
+    # - name: Invalidate CloudFront cache
+    #   run: |
+    #     aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/index.html"

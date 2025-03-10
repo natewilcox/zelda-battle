@@ -17,10 +17,26 @@ jobs:
           npm run build --workspace=@natewilcox/zelda-battle-client
           npm run build --workspace=@natewilcox/zelda-battle-server
 
-      - name: Archive build artifacts
+      - name: Archive library build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: 'build-artifacts'
+          name: 'build-artifacts-library'
+          path: |
+            ./packages/library/dist/
+          retention-days: 1
+
+      - name: Archive client build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: 'build-artifacts-client'
+          path: |
+            ./packages/client/dist/
+          retention-days: 1
+
+      - name: Archive server build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: 'build-artifacts-server'
           path: |
             ./packages/server/build/
           retention-days: 1
@@ -38,7 +54,7 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
-          name: 'build-artifacts'
+          name: 'build-artifacts-server'
           path: packages/server/build/
       - run: |
           ls packages/server/build/ -ltr

@@ -13,8 +13,6 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "@natewilcox/zelda-battle-client": "file:",
-    "@natewilcox/zelda-battle-shared": "file:",
     "bitecs": "^0.3.40",
     "colyseus.js": "^0.16.9",
     "phaser": "3.55.2",

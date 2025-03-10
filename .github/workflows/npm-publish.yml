@@ -22,8 +22,6 @@ jobs:
         with:
           name: 'build-artifacts'
           path: |
-            ./packages/shared/dist/
-            ./packages/client/dist/
             ./packages/server/build/
           retention-days: 1
           

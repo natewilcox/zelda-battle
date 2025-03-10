@@ -74,9 +74,7 @@ jobs:
 
     - name: Copy files to the S3 bucket
       run: |
-        ls -ltr
-        ls ./client -ltr
-        aws s3 sync ./client s3://zelda.battle.natewilcox.io --acl=private --delete
+        aws s3 sync ./client/dist s3://zelda.battle.natewilcox.io --acl=private --delete
 
     # - name: Invalidate CloudFront cache
     #   run: |

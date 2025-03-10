@@ -43,7 +43,7 @@ jobs:
           name: 'build-artifacts'
           path: ./packages/server/build
       - run: |
-          ls packages/server
+          ls packages/server -ltr
           npm publish --workspace=@natewilcox/zelda-battle-server --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -75,8 +75,8 @@ jobs:
     - name: Copy files to the S3 bucket
       run: |
         ls -ltr
-        ls ./packages/client -ltr
-        aws s3 sync ./packages/client s3://zelda.battle.natewilcox.io --acl=private --delete
+        ls ./client -ltr
+        aws s3 sync ./client s3://zelda.battle.natewilcox.io --acl=private --delete
 
     # - name: Invalidate CloudFront cache
     #   run: |

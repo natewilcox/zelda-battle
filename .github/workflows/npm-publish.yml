@@ -22,9 +22,9 @@ jobs:
         with:
           name: 'build-artifacts'
           path: |
-            packages/shared/dist
-            packages/client/dist
-            packages/server/build
+            ./packages/shared/dist/
+            ./packages/client/dist/
+            ./packages/server/build/
           retention-days: 1
           
   publish:
@@ -41,42 +41,41 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: 'build-artifacts'
-          path: ./packages/server/build
+          path: packages/server/build/
       - run: |
-          cd packages/server
-          ls build -ltr
-          npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Patch version
-        # if: github.event_name == 'release'
-        run: |
-          git config --local user.email "natewilcox@gmail.com"
-          git config --local user.name "GitHub Action"
+          ls -ltr
+      #     # npm publish --access public
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Patch version
+      #   # if: github.event_name == 'release'
+      #   run: |
+      #     git config --local user.email "natewilcox@gmail.com"
+      #     git config --local user.name "GitHub Action"
 
-          npm version patch --workspace=@natewilcox/zelda-battle-server -m "Automated version bump [skip ci]"
-          git push
+      #     npm version patch --workspace=@natewilcox/zelda-battle-server -m "Automated version bump [skip ci]"
+      #     git push
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Download build artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: 'build-artifacts'
+  # deploy:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Download build artifact
+  #     uses: actions/download-artifact@v4
+  #     with:
+  #       name: 'build-artifacts'
 
-    - name: Set up AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-2
+  #   - name: Set up AWS credentials
+  #     uses: aws-actions/configure-aws-credentials@v1
+  #     with:
+  #       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #       aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #       aws-region: us-east-2
 
-    - name: Copy files to the S3 bucket
-      run: |
-        aws s3 sync ./client/dist s3://zelda-battle.natewilcox.io --acl=private --delete
+  #   - name: Copy files to the S3 bucket
+  #     run: |
+  #       aws s3 sync ./client/dist s3://zelda-battle.natewilcox.io --acl=private --delete
 
-    - name: Invalidate CloudFront cache
-      run: |
-        aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/index.html"
+  #   - name: Invalidate CloudFront cache
+  #     run: |
+  #       aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/index.html"

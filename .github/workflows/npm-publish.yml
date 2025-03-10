@@ -43,8 +43,8 @@ jobs:
           name: 'build-artifacts'
           path: ./packages/server/build
       - run: |
-          ls packages/server -ltr
-          npm publish --workspace=@natewilcox/zelda-battle-server --access public
+          cd packages/server
+          npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Patch version

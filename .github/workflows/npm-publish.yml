@@ -22,7 +22,7 @@ jobs:
         with:
           name: 'build-artifacts-library'
           path: |
-            ./packages/library/dist/
+            ./packages/shared/dist/
           retention-days: 1
 
       - name: Archive client build artifacts

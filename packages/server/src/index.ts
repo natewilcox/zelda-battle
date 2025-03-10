@@ -9,6 +9,7 @@
  * See: https://docs.colyseus.io/server/api/#constructor-options
  */
 import { listen } from "@colyseus/tools";
+export { BattleRoyaleRoom } from "./rooms/BattleRoyaleRoom"
 
 // Import Colyseus config
 import app from "./app.config";

@@ -17,7 +17,6 @@ type Payload = {
     uid: string,
     token: string,
     gameMode: number,
-    startCommand: any,
     minClients: number
 }
 
@@ -35,7 +34,7 @@ export class OnJoinCommand extends Command<BattleRoyaleRoom, Payload> {
      * 
      * @param param0 
      */
-    async execute({ dispatcher, sessionId, handle, uid, token, gameMode, startCommand, minClients }: Payload) {
+    async execute({ dispatcher, sessionId, handle, uid, token, gameMode, minClients }: Payload) {
 
         //find the client object by session id.
         const client = this.room.clients.find(c => c.id === sessionId);
@@ -83,7 +82,7 @@ export class OnJoinCommand extends Command<BattleRoyaleRoom, Payload> {
         //check if there is enough to play and start the game
         if(this.room.hasReachedMaxClients()) {
 
-            return [new startCommand().setPayload({ dispatcher })];
+            return [new StartGameCommand().setPayload({ dispatcher })];
         }
         else {
 
@@ -109,7 +108,7 @@ export class OnJoinCommand extends Command<BattleRoyaleRoom, Payload> {
                     if(timer == 0 && this.room.clients.length >= minClients) {
                         
                         //when the timer reaches 0, start game
-                        this.dispatcher.dispatch(new startCommand().setPayload({ dispatcher }));
+                        this.dispatcher.dispatch(new StartGameCommand().setPayload({ dispatcher }));
                     }
                 });
             }

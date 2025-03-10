@@ -5,13 +5,6 @@ import { BattleRoyaleRoom } from "./rooms/BattleRoyaleRoom";
 import { OnJoinCommand } from "./commands/OnJoinCommand";
 import { StartGameCommand } from "./commands/StartGameCommand";
 
-export const mapFiles = new Map([
-    ['overworld1', '../../maps/overworld1.json'],
-    ['overworld2', '../../maps/overworld2.json'],
-    ['testing', '../../maps/testing.json'],
-    ['dungeon1', '../../maps/dungeon1.json']
-]);
-
 /**
  * Import your Room files
  */
@@ -22,13 +15,7 @@ export default config({
         /**
          * Define your room handlers:
          */
-        gameServer.define('room_1', BattleRoyaleRoom, { 
-            mapName: 'overworld1', 
-            minClients: 1,
-            maxClients: 10,
-            joinCommand: OnJoinCommand,
-            startCommand: StartGameCommand
-        });
+        gameServer.define('room_1', BattleRoyaleRoom);
 
     },
 

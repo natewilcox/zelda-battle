@@ -32,7 +32,6 @@ import { NPCAICommand } from '../commands/NPCAICommand';
 import { DisconnectCommand } from '../commands/DisconnectCommand';
 import { BattleRoyaleRoomState } from './schema/BattleRoyaleRoomState';
 import { GameState } from '@natewilcox/zelda-battle-shared';
-import { mapFiles } from '../app.config';
 import { OpenLockedDoorCommand } from '../commands/OpenLockedDoorCommand';
 //import '@geckos.io/phaser-on-nodejs';
 //import Phaser from 'phaser';
@@ -41,6 +40,7 @@ import { SwordAttackCommand } from '../commands/SwordAttackCommand';
 import { DestroyEnemyCommand } from '../commands/DestroyEnemyCommand';
 import { HurtPlayerCommand } from '../commands/HurtPlayerCommand';
 import { DestroyPlayerCommand } from '../commands/DestroyPlayerCommand';
+import { OnJoinCommand } from '../commands/OnJoinCommand';
 
 export const gameInputCache = new Map<string, any>();
 
@@ -53,8 +53,6 @@ export class BattleRoyaleRoom extends Room<BattleRoyaleRoomState> {
   simulation: Phaser.Game;
 
   minClients: number = 1;
-  joinCommand!: any;
-  startCommand!: Command<BattleRoyaleRoom, any>;
 
   //drop rates
   itemDropRate: any[][] = [];
@@ -84,14 +82,12 @@ export class BattleRoyaleRoom extends Room<BattleRoyaleRoomState> {
    * 
    * @param options 
    */
-  async onCreate (options: any) {
+  async onCreate () {
 
-    this.minClients = options.minClients;
-    this.joinCommand = options.joinCommand;
-    this.startCommand = options.startCommand;
+    this.minClients = 1;
+    this.maxClients = 10;
 
     this.gameTicker();
-    this.maxClients = options.maxClients;
 
     //fetch drop rates from database
     this.itemDropRate = [
@@ -147,8 +143,15 @@ export class BattleRoyaleRoom extends Room<BattleRoyaleRoomState> {
       [GameTextures.Nothing, 75]
     ]
 
+    const mapFiles = new Map([
+      ['overworld1', '../../maps/overworld1.json'],
+      ['overworld2', '../../maps/overworld2.json'],
+      ['testing', '../../maps/testing.json'],
+      ['dungeon1', '../../maps/dungeon1.json']
+    ]);
+
     //dynamically load and cache map input game input map
-    const mapJson = await require(mapFiles.get(options.mapName)!);
+    const mapJson = await require(mapFiles.get('overworld1')!);
     gameInputCache.set('mapJson', mapJson);
 
     // start the simulation when server begins
@@ -431,10 +434,9 @@ export class BattleRoyaleRoom extends Room<BattleRoyaleRoomState> {
    */
   onJoin (client: Client, options: any) {
 
-    this.dispatcher.dispatch(new this.joinCommand(), { 
+    this.dispatcher.dispatch(new OnJoinCommand, { 
       sessionId: client.id,
       dispatcher: this.dispatcher,
-      startCommand: this.startCommand,
       minClients: this.minClients,
       ...options
     });

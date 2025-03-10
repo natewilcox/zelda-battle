@@ -41,10 +41,20 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-artifacts
-
-      - run: npm publish --workspace=@natewilcox/zelda-battle-server --access public
+          path: ./packages/server/build
+      - run: |
+          ls packages/server
+          npm publish --workspace=@natewilcox/zelda-battle-server --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Patch version
+        # if: github.event_name == 'release'
+        run: |
+          git config --local user.email "natewilcox@gmail.com"
+          git config --local user.name "GitHub Action"
+
+          npm version patch --workspace=@natewilcox/zelda-battle-server -m "Automated version bump [skip ci]"
+          git push
 
 # jobs:
 #   npm-build:

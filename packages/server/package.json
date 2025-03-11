@@ -3,6 +3,7 @@
   "version": "1.0.27",
   "description": "npm init template for bootstrapping an empty Colyseus project",
   "main": "build/main.js",
+  "module": "build/main.js",
   "types": "build/main.d.ts",
   "type": "module",
   "files": [

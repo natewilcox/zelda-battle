@@ -1,9 +1,9 @@
 {
   "name": "@natewilcox/zelda-battle-server",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "npm init template for bootstrapping an empty Colyseus project",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "build/main.js",
+  "types": "build/main.d.ts",
   "files": [
     "./build",
     "./maps",

@@ -51,24 +51,46 @@ jobs:
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org/'
-      - name: Download build artifacts
+
+      - name: Download library build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: 'build-artifacts-library'
+          path: packages/shared/dist/
+      - name: publish-library
+        run: |
+          cd packages/library
+          npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Patch Library Version
+        # if: github.event_name == 'release'
+        run: |
+          git config --local user.email "natewilcox@gmail.com"
+          git config --local user.name "GitHub Action"
+
+          cd packages/library
+          npm version patch --workspace=@natewilcox/zelda-battle-shared -m "Automated version bump [skip ci]"
+          git push
+
+      - name: Download server build artifacts
         uses: actions/download-artifact@v4
         with:
           name: 'build-artifacts-server'
           path: packages/server/build/
-      - run: |
-          pwd
+      - name: publish-server
+        run: |
           cd packages/server
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Patch version
+      - name: Patch Server Version
         # if: github.event_name == 'release'
         run: |
-          pwd
           git config --local user.email "natewilcox@gmail.com"
           git config --local user.name "GitHub Action"
 
+          cd packages/server
           npm version patch --workspace=@natewilcox/zelda-battle-server -m "Automated version bump [skip ci]"
           git push
 

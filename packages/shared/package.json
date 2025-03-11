@@ -13,8 +13,8 @@
   "author": "Nathan Wilcox",
   "license": "ISC",
   "dependencies": {
-    "@colyseus/command": "^0.3.1",
-    "@colyseus/schema": "^3.0.16",
+    "@colyseus/command": "~0.3.1",
+    "@colyseus/schema": "~2.0.36",
     "build": "^0.1.4",
     "generate-unique-id": "^2.0.3"
   }

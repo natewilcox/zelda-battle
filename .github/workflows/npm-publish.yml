@@ -70,7 +70,7 @@ jobs:
           git config --local user.name "GitHub Action"
 
           cd packages/shared
-          npm version patch --workspace=@natewilcox/zelda-battle-shared -m "Automated version bump [skip ci]"
+          npm version patch -m "Automated version bump [skip ci]"
           git push
 
       - name: Download server build artifacts
@@ -91,7 +91,7 @@ jobs:
           git config --local user.name "GitHub Action"
 
           cd packages/server
-          npm version patch --workspace=@natewilcox/zelda-battle-server -m "Automated version bump [skip ci]"
+          npm version patch -m "Automated version bump [skip ci]"
           git push
 
   # deploy:

@@ -1,23 +1,24 @@
 {
   "name": "@natewilcox/zelda-battle-server",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "npm init template for bootstrapping an empty Colyseus project",
-  "main": "build/main.js",
-  "types": "build/main.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "files": [
     "./build",
     "./maps",
     "./package.json"
   ],
   "engines": {
-    "node": ">= 20.9.0"
+    "node": ">= 18.x"
   },
   "scripts": {
     "start": "tsx watch src/index.ts",
     "loadtest": "tsx loadtest/example.ts --room my_room --numClients 2",
     "build": "npm run clean && tsc",
     "clean": "rimraf build",
-    "test": "mocha -r tsx test/**_test.ts --exit --timeout 15000"
+    "test": "mocha -r tsx test/**_test.ts --exit --timeout 15000",
+    "deploy": "@colyseus/cloud deploy"
   },
   "author": "",
   "license": "UNLICENSED",

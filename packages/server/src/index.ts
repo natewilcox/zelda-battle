@@ -9,13 +9,9 @@
  * See: https://docs.colyseus.io/server/api/#constructor-options
  */
 import { listen } from "@colyseus/tools";
-export { BattleRoyaleRoom } from "./rooms/BattleRoyaleRoom"
 
 // Import Colyseus config
 import app from "./app.config";
 
 // Create and listen on 2567 (or PORT environment variable.)
-if(process.env.LOCAL_DEV) {
-    console.log('running local embedded server');
-    listen(app);
-}
+listen(app);

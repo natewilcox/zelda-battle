@@ -1,9 +1,9 @@
 {
   "name": "@natewilcox/zelda-battle-server",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "npm init template for bootstrapping an empty Colyseus project",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "build/main.js",
+  "types": "build/main.d.ts",
   "files": [
     "./build",
     "./maps",
@@ -37,16 +37,12 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@colyseus/command": "~0.3.1",
-    "@colyseus/core": "~0.15.55",
-    "@colyseus/monitor": "~0.15.0",
-    "@colyseus/playground": "~0.15.3",
-    "@colyseus/schema": "~2.0.36",
-    "@colyseus/tools": "~0.15.0",
-    "@colyseus/ws-transport": "~0.15.3",
+    "@colyseus/monitor": "^0.16.0",
+    "@colyseus/playground": "^0.16.0",
+    "@colyseus/tools": "^0.16.0",
     "@geckos.io/phaser-on-nodejs": "1.2.7",
     "bad-words": "3.0.4",
-    "colyseus": "~0.15.0",
+    "colyseus": "^0.16.0",
     "express": "^4.18.2",
     "generate-unique-id": "^2.0.3",
     "lodash": "^4.17.21",

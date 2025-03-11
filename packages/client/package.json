@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "bitecs": "^0.3.40",
-    "colyseus.js": "^0.16.9",
+    "colyseus.js": "^0.16.0",
     "phaser": "3.55.2",
     "regenerator-runtime": "^0.14.1",
     "short-uuid": "^5.2.0",

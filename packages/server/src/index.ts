@@ -15,7 +15,7 @@ export { BattleRoyaleRoom } from "./rooms/BattleRoyaleRoom"
 import app from "./app.config";
 
 // Create and listen on 2567 (or PORT environment variable.)
-if(!process.env.LOCAL_DEV) {
+if(process.env.LOCAL_DEV) {
     console.log('running local embedded server');
     listen(app);
 }

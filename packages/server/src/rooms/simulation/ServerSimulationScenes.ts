@@ -54,6 +54,7 @@ export class ServerSimulationScene extends Phaser.Scene {
 
     //create map based on json data
     const mapData = Phaser.Tilemaps.Parsers.Tiled.ParseJSONTiled('simulationMap', gameInputCache.get('mapJson'), true);
+
     this.map = new Phaser.Tilemaps.Tilemap(this, mapData);
     this.ground = new Phaser.Tilemaps.TilemapLayer(this, this.map, this.map.getLayerIndex('Ground Layer'), 'dungeon');
     this.ground.setCollisionByProperty({

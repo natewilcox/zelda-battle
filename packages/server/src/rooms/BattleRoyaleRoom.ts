@@ -151,7 +151,7 @@ export class BattleRoyaleRoom extends Room<BattleRoyaleRoomState> {
     ]);
 
     //dynamically load and cache map input game input map
-    const mapJson = await import(mapFiles.get('overworld1')!);
+    const mapJson = await require(mapFiles.get('overworld1')!);
     gameInputCache.set('mapJson', mapJson);
 
     // start the simulation when server begins

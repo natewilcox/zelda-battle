@@ -76,11 +76,11 @@ export default class ServerService {
 
     constructor() {
 
-        if(process.env.NODE_ENV === 'development') {
+        if(process.env.NODE_ENV !== 'development') {
             this.client = new Client('ws://localhost:2567');
         }
         else {
-            this.client = new Client('wss://us-ord-41f57128.colyseus.cloud');
+            this.client = new Client('https://us-ord-41f57128.colyseus.cloud');
         }
 
         this.events = new Phaser.Events.EventEmitter();

@@ -80,7 +80,7 @@ export default class ServerService {
             this.client = new Client('ws://localhost:2567');
         }
         else {
-            this.client = new Client('wss://afklha.colyseus.dev:443');
+            this.client = new Client('wss://us-ord-41f57128.colyseus.cloud');
         }
 
         this.events = new Phaser.Events.EventEmitter();

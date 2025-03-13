@@ -76,7 +76,7 @@ export default class ServerService {
 
     constructor() {
 
-        if(process.env.NODE_ENV !== 'development') {
+        if(process.env.NODE_ENV === 'development') {
             this.client = new Client('ws://localhost:2567');
         }
         else {
